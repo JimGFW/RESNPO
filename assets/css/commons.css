@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+.flx {
+  display: flex;
+}
+.flx-col {
+  display: flex;
+  flex-direction: column;
+}
+.flx-row {
+  display: flex;
+  flex-direction: row;
+}
+.jc-sb {
+  justify-content: space-between;
+}
+.jc-c {
+  justify-content: center;
+}
+.jc-sa {
+  justify-content: space-around;
+}
+.ai-c {
+  align-items: center;
+}
+
+.p-0_5 {
+  padding: 0.125rem;
+}

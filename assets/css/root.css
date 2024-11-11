@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "bevietnampro";
+  src: ("../fonts/BeVietnamPro-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NotoSansJP";
+  src: url("../fonts/NotoSansJP-Regular.ttf") format("opentype");
+}
+
+:root {
+  --bevietnampro: "bevietnampro", sans-serif;
+  --notosansjp: "NotoSansJP", sans-serif;
+}
