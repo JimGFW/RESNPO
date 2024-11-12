@@ -1,0 +1,252 @@
+#homepage {
+  .uc-container,
+  .whatsnew-container {
+    padding: 5rem;
+  }
+
+  .event-card {
+    width: 28.75rem;
+    background-color: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .event-content {
+    padding: 1.25rem; /* 20px */
+  }
+
+  .title-content {
+    margin-top: 1rem;
+    flex-basis: 80%;
+  }
+
+  .title-content h3 {
+    font-family: var(--bevietnampro);
+    font-weight: 700;
+  }
+
+  .title-content p {
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+
+  .brown-play {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .event-caption {
+    justify-content: space-between;
+  }
+
+  .event-image {
+    height: 15.625rem;
+  }
+
+  .event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.75rem;
+  }
+
+  .event-date {
+    border: 2px solid #0d0d0d;
+    display: inline-block;
+    border-radius: 500px;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .events-slider .slick-slide {
+    margin: 0 10px;
+  }
+
+  .events-slider .slick-list {
+    margin: 0 -10px;
+  }
+
+  .button-style-reset {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .section-title h1 {
+    font-family: var(--bevietnampro);
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  .span-subtitle {
+    vertical-align: bottom;
+    color: var(--lightbrown);
+    font-weight: 700;
+  }
+
+  .section-subtitle {
+    align-self: flex-end;
+    line-height: 2;
+    color: var(--lightbrown);
+    font-size: 1.25rem;
+  }
+
+  .section-title {
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .credential-card {
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0.5rem 0.75rem;
+    padding: 0.75rem 1.25rem 0.75rem 0.75rem;
+    border-radius: 500px;
+    gap: 1rem;
+  }
+
+  .credential-card h3 {
+    font-family: var(--notosansjp);
+    font-weight: 700;
+  }
+
+  .credential-card p {
+    font-family: var(--bevietnampro);
+    font-weight: 500;
+  }
+
+  .cred-image {
+    border: 10px solid #e7e7e7;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+  }
+
+  .cred-image img {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .adviser-container {
+    padding: 5rem;
+  }
+
+  .adviser-img {
+    position: relative;
+    border-radius: 2rem;
+    text-align: center;
+    background-color: #fbe9e5;
+  }
+
+  .adviser-description {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: -4rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .adviser-description h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  .adviser-col-wrapper {
+    width: 40%;
+  }
+
+  .adviser-credentials {
+    width: 60%;
+  }
+
+  .home-container {
+    position: relative;
+  }
+
+  .home-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    text-align: left;
+    padding: 1.25rem 5rem 2.5rem;
+    color: #fff;
+  }
+
+  .home-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .home-content h1 {
+    font-size: 2rem;
+    font-family: var(--notosansjp);
+  }
+
+  .long-button {
+    background-color: var(--lightbrown);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 500px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    width: 15.125rem;
+    margin-top: 1rem;
+  }
+
+  .news-thumbnail {
+    width: 17.625rem;
+  }
+
+  .news-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.75rem;
+  }
+
+  .news-content {
+    padding: 1.25rem;
+  }
+
+  .new-tag {
+    display: inline-block;
+    background-color: var(--darkbrown);
+    color: #ffffff;
+    padding: 0.2em 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    border-radius: 100px;
+  }
+
+  .news-list {
+    gap: 1.25rem;
+  }
+
+  .news-card {
+    background-color: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .news-card .the-excerpt {
+    font-size: 0.75em;
+    font-family: var(--notosansjp);
+  }
+}

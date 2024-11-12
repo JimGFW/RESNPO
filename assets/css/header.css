@@ -2,23 +2,39 @@ body {
   font-family: var(--bevietnampro);
 }
 
-.header-container {
-  width: 64.25rem;
+#header .header-animate {
+  animation: fadeInDown 0.8s ease-out;
+  z-index: 2;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#header .header-container {
+  width: 80rem;
   background-color: #fff;
   border-radius: 20px;
   position: fixed;
-  top: 2.75rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;
   padding: 0.75rem 1.25rem;
+  z-index: 2;
 }
 
-.dropdown-content {
+#header .dropdown-content {
   display: none;
 }
 
-.dropdown:hover .dropdown-content {
+#header .dropdown:hover .dropdown-content {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -28,46 +44,55 @@ body {
   padding: 1rem;
 }
 
-.dropdown-content li {
+#header .dropdown-content li {
   padding-inline: 100%;
   text-align: left;
   padding-block: 0.5rem;
   margin-top: 0.5rem;
 }
-.dropdown-content li:hover {
+
+#header .dropdown-content li:hover {
   background-color: bisque;
 }
-.logo-container {
+
+#header .logo-container {
   display: inline-block;
   width: 10%;
 }
-.logo-container img {
+
+#header .logo-container img {
   width: 7.25rem; /* 116px */
   height: 2.75rem; /* 44px */
 }
-.nav-menu {
+
+#header .nav-menu {
   margin-left: auto;
   margin-right: 2rem;
 }
-.nav-menu ul {
+
+#header .nav-menu ul {
   gap: 1rem;
   align-items: center;
 }
-.nav-menu ul li {
+
+#header .nav-menu ul li {
   list-style: none;
 }
-.nav-menu ul li a {
+
+#header .nav-menu ul li a {
   font-family: var(--bevietnampro);
   font-size: 0.875rem;
   text-decoration: none;
   color: black;
 }
-.contact-us {
+
+#header .contact-us {
   background-color: brown;
   border-radius: 500px;
   padding: 0.5rem 1rem;
 }
-#contact a {
+
+#header #contact a {
   color: white;
   gap: 0.625rem;
 }

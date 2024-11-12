@@ -11,9 +11,9 @@
 <body>
   <!-- data-aos="fade-up"
   data-aos-anchor-placement="top-bottom" -->
-  <header class="flx jc-sa">
+  <header id="header" class="flx jc-sa global-width header-animate">
 
-    <main class="header-container flx p-0_5">
+    <div class="header-container flx p-0_5">
       <div class="logo-container p-0_5">
         <img src="<?= RESNPO_IMAGE . '/res-logo.png' ?>" alt="header-logo">
       </div>
@@ -64,5 +64,6 @@
             </a>
         </ul>
       </nav>
-    </main>
+    </div>
   </header>
+  <main>

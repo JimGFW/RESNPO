@@ -9,3 +9,13 @@ jQuery(document).ready(function ($) {
     autoplaySpeed: 2500,
   });
 });
+
+jQuery(document).ready(function ($) {
+  $(".events-slider").slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    adaptiveHeight: true,
+  });
+});

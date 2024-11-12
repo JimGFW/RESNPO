@@ -1,7 +1,14 @@
 @font-face {
   font-family: "bevietnampro";
-  src: ("../fonts/BeVietnamPro-Regular.ttf") format("truetype");
+  src: url("../fonts/BeVietnamPro-Regular.ttf") format("truetype");
 }
+
+/* @font-face {
+  font-family: "bevietnampro-bold";
+  src: url("../fonts/BeVietnamPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+} */
+
 @font-face {
   font-family: "NotoSansJP";
   src: url("../fonts/NotoSansJP-Regular.ttf") format("opentype");
@@ -9,5 +16,9 @@
 
 :root {
   --bevietnampro: "bevietnampro", sans-serif;
+  --bevietnampro-bold: "bevietnampro", sans-serif;
   --notosansjp: "NotoSansJP", sans-serif;
+
+  --lightbrown: #aa402a;
+  --darkbrown: #40170f;
 }

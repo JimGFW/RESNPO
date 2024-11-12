@@ -1,22 +1,22 @@
-.home_landing {
+.homepage .home_landing {
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
 
-.home-container {
+.homepage .home-container {
   margin: 2rem;
   height: calc(100vh - 4rem);
 }
 
-.bg-container {
+.homepage .bg-container {
   width: 100%;
   height: 100%;
   border-radius: 2rem;
   overflow: hidden;
 }
 
-.home-bg::before {
+.homepage .home-bg::before {
   content: "";
   position: absolute;
   top: 0;
