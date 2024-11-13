@@ -44,3 +44,26 @@ html {
 .p-0_5 {
   padding: 0.125rem;
 }
+
+/* Color */
+.c-white {
+  color: #fff;
+}
+.c-black {
+  color: #000;
+}
+.c-lbrown {
+  color: var(--lightbrown);
+}
+.c-dbrown {
+  color: var(--darkbrown);
+}
+.bg-lbrown {
+  background-color: var(--lightbrown);
+}
+.bg-dbrown {
+  background-color: var(--darkbrown);
+}
+.bg-white {
+  background-color: #fff;
+}
