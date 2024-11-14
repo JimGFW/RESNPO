@@ -67,3 +67,70 @@ html {
 .bg-white {
   background-color: #fff;
 }
+
+.long-button,
+.short-button,
+.white-short-button {
+  border: none;
+}
+
+.short-button {
+  padding: 0.5rem 1rem;
+  border-radius: 500px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  width: 10.3125rem;
+  margin-top: 1rem;
+}
+
+.x-short-button {
+  padding: 0.5rem 1rem;
+  border-radius: 500px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  max-width: 130px;
+  margin-top: 1rem;
+  border: none;
+}
+
+.long-button p,
+.short-button p,
+.x-short-button p {
+  font-size: 1rem;
+  font-family: var(--notosansjp);
+  font-weight: 400;
+  gap: 2rem;
+}
+
+/* .long-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1rem;
+} */
+
+.long-button {
+  padding: 0.5rem 1rem;
+  border-radius: 500px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  width: 15.125rem;
+  margin-top: 1rem;
+  border-color: unset;
+}
+
+.long-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+a {
+  text-decoration: none;
+}

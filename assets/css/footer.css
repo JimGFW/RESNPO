@@ -1,0 +1,88 @@
+.footer-container {
+  padding: 2rem 5rem 0 5rem;
+}
+.col-1 {
+  width: 15.75rem;
+  height: auto;
+}
+.col-1 img {
+  width: 100%;
+  height: auto;
+}
+
+.col-4 {
+  background-color: #fdf5f3;
+  border-radius: 0.75rem;
+  padding: 1.25rem 2rem;
+  max-width: 26.8125rem;
+}
+
+.col-title {
+  color: var(--lightbrown);
+  font-size: 14px;
+  font-weight: 700;
+  font-family: var(--bevietnampro);
+  margin-bottom: 0.75rem;
+}
+
+.nav-links ul {
+  list-style: none;
+  padding: 0;
+}
+.nav-links ul li {
+  margin-bottom: 0.5rem;
+}
+.nav-links ul li a {
+  text-decoration: none;
+  color: #000;
+}
+.nav-links ul li a:visited {
+  color: inherit;
+}
+.col-middle {
+  gap: 1rem;
+  padding: 1rem;
+}
+.footer-content {
+  padding-block: 1rem;
+}
+
+.top-button {
+  width: 100%;
+  text-align: right;
+  display: inline-block;
+  border: none;
+}
+
+.button-p {
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.top-button span {
+  transform: rotate(-90deg);
+}
+
+.copyright-wrapper {
+  padding: 1.25rem 0;
+}
+.social {
+  gap: 0.5rem;
+}
+
+footer .x-short-button p {
+  gap: 1rem;
+}
+
+footer .section-title {
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-family: var(--bevietnampro);
+  font-weight: 600;
+  /* font-size: 24px; */
+}
+
+footer .long-button {
+  margin-top: 4.375rem;
+}

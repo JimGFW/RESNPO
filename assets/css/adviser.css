@@ -1,4 +1,5 @@
 #homepage {
+  .location-container,
   .rxl-container,
   .location-container,
   .adviser-container,
@@ -6,41 +7,6 @@
   .uc-container,
   .whatsnew-container {
     padding: 0 5rem 3rem 5rem;
-  }
-  .long-button,
-  .short-button,
-  .white-short-button {
-    border: none;
-  }
-
-  .short-button {
-    padding: 0.5rem 1rem;
-    border-radius: 500px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    cursor: pointer;
-    width: 10.3125rem;
-    margin-top: 1rem;
-  }
-
-  .x-short-button {
-    padding: 0.5rem 1rem;
-    border-radius: 500px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    cursor: pointer;
-    width: 130px;
-    margin-top: 1rem;
-  }
-
-  .long-button p,
-  .short-button p,
-  .x-short-button p {
-    font-size: 1rem;
-    font-family: var(--notosansjp);
-    font-weight: 400;
   }
 
   /* !!Landing_>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -108,7 +74,7 @@
   }
 
   /* !!Adviser _>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-
+  /* Reset button styles */
   .button-style-reset {
     background: none;
     border: none;
@@ -119,6 +85,11 @@
     cursor: pointer;
     outline: none;
     box-shadow: none;
+  }
+
+  .section-title {
+    gap: 1rem;
+    padding: 5rem 0 2rem 0;
   }
 
   .section-title h1 {
@@ -140,30 +111,86 @@
     font-size: 1.25rem;
   }
 
-  .section-title {
-    gap: 1rem;
-    padding: 5rem 0 2rem 0;
+  .adviser-content {
+    display: flex;
+    gap: 2rem;
+    min-height: 100%;
   }
 
-  .credential-card {
-    align-items: center;
+  .adviser-col-wrapper {
+    width: 45%;
+    position: relative;
+    border-radius: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .adviser-img {
+    background-color: #fbe9e5;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 2rem;
+  }
+
+  .adviser-img img {
+    width: 90%;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+
+  .adviser-description {
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 0.5rem 0.75rem;
+    padding: 2rem;
+    /* margin: 1rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: -2rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .adviser-description h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .adviser-credentials {
+    width: 60%;
+    gap: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .credential-card {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 0.75rem;
     padding: 0.75rem 1.25rem 0.75rem 0.75rem;
-    border-radius: 500px;
     gap: 1rem;
+    flex: 1;
   }
 
   .credential-card h3 {
     font-family: var(--notosansjp);
     font-weight: 700;
+    margin-bottom: 0.25rem;
   }
 
   .credential-card p {
     font-family: var(--bevietnampro);
     font-weight: 500;
+    color: #666;
   }
 
   .cred-image {
@@ -171,6 +198,7 @@
     border-radius: 50%;
     width: 64px;
     height: 64px;
+    flex-shrink: 0;
   }
 
   .cred-image img {
@@ -180,44 +208,7 @@
     object-fit: contain;
   }
 
-  .adviser-img {
-    position: relative;
-    border-radius: 2rem;
-    text-align: center;
-    background-color: #fbe9e5;
-    height: 100%;
-  }
-  .adviser-img img {
-    margin-top: 6.563rem;
-  }
-
-  .adviser-description {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    margin: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: -11rem;
-    position: relative;
-    z-index: 2;
-  }
-
-  .adviser-description h3 {
-    font-size: 1.125rem;
-    font-weight: 700;
-  }
-
-  .adviser-col-wrapper {
-    width: 40%;
-  }
-
-  .adviser-credentials {
-    width: 60%;
-  }
-
+  /* Jo,me */
   .home-container {
     position: relative;
   }
@@ -240,20 +231,6 @@
   .home-content h1 {
     font-size: 2rem;
     font-family: var(--notosansjp);
-  }
-
-  .long-button {
-    background-color: var(--lightbrown);
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 500px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    cursor: pointer;
-    width: 15.125rem;
-    margin-top: 1rem;
-    border-color: unset;
   }
 
   .news-thumbnail {
@@ -390,6 +367,9 @@
   }
 
   /* !!Location _>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+  .location-container {
+    background-color: #fff;
+  }
 
   .location-card-wrapper {
     gap: 1.25rem;

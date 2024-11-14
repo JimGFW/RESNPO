@@ -11,7 +11,7 @@
 <body>
   <!-- data-aos="fade-up"
   data-aos-anchor-placement="top-bottom" -->
-  <header id="header" class="flx jc-sa global-width  header-animate">
+  <header id="header" class="flx jc-sa global-width">
 
     <div class="header-container flx">
       <div class="logo-container">
