@@ -1,8 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const fadeElements = document.querySelectorAll(".fade-left");
+  const fadeLeftElements = document.querySelectorAll(".fade-left");
+  const fadeRightElements = document.querySelectorAll(".fade-right");
+  const fadeUpElements = document.querySelectorAll(".fade-up");
+  const fadeDownElements = document.querySelectorAll(".fade-down");
 
   function checkElementsInView() {
-    fadeElements.forEach((el) => {
+    const allElements = [
+      ...fadeLeftElements,
+      ...fadeRightElements,
+      ...fadeUpElements,
+      ...fadeDownElements,
+    ];
+
+    allElements.forEach((el) => {
       const rect = el.getBoundingClientRect();
       if (rect.top < window.innerHeight && rect.bottom >= 0) {
         el.classList.add("active");

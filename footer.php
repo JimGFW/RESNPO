@@ -11,7 +11,7 @@
       </div>
       <div class="flx jc-sb footer-content">
         <div class="col-1">
-          <img src="<?= RESNPO_IMAGE . '/res-logo.png' ?>" alt="res-logo">
+          <a href="<?= home_url() ?>"><img src="<?= RESNPO_IMAGE . '/res-logo.png' ?>" alt="res-logo"></a>
           <span>愛媛県松山市平井町1426番地2</span>
         </div>
         <div class="col-middle flx-row jc-sb">
@@ -45,12 +45,14 @@
         <div class="col-4">
           <div class="col-4-title"><?php section_title('Supporter') ?></div>
           <p>子どもたちに一つでも多くの機会を届けるため 皆様の寄付を私たちの活動に利用させていただきます。</p>
-          <button type="button" class="long-button c-white bg-lbrown">
-            <p class="ai-c flx jc-sb">プロフィールを見る
-              <span> <?= file_get_contents(RESNPO_SVG . '/play.svg') ?>
-            </p>
-            </span>
-          </button>
+          <a href="<?= home_url() . '/donation' ?>">
+            <button type="button" class="long-button c-white bg-lbrown">
+              <p class="ai-c flx jc-sb">プロフィールを見る
+                <span> <?= file_get_contents(RESNPO_SVG . '/play.svg') ?>
+              </p>
+              </span>
+            </button>
+          </a>
         </div>
       </div>
 
@@ -62,16 +64,15 @@
             <p>© 2021 NPO RES</p>
           </div>
           <div class="social flx-row">
-            <a href="https://www.facebook.com/npores" target="_blank"><?= file_get_contents(RESNPO_SVG . '/facebook.svg') ?></a>
-            <a href="https://www.instagram.com/npores/" target="_blank"><?= file_get_contents(RESNPO_SVG . '/youtube.svg') ?></a>
-            <a href="https://twitter.com/npores" target="_blank"><?= file_get_contents(RESNPO_SVG . '/line.svg') ?></a>
+            <a href="https://www.facebook.com/ChiikiKyouiku/" target="_blank"><?= file_get_contents(RESNPO_SVG . '/facebook.svg') ?></a>
+            <a href="https://www.youtube.com/channel/UCEJ3QcF3DZ9o_MYbhMxgV4Q" target="_blank"><?= file_get_contents(RESNPO_SVG . '/youtube.svg') ?></a>
+            <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=601qwusa" target="_blank"><?= file_get_contents(RESNPO_SVG . '/line.svg') ?></a>
           </div>
         </div>
       </div>
     </div>
   </div>
 </footer>
-
 </main>
 </body>
 

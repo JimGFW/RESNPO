@@ -17,21 +17,6 @@ body {
   box-sizing: border-box;
 }
 
-#header .header-animate {
-  animation: fadeInDown 0.8s ease-out;
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 #header .header-container {
   max-width: 80rem;
   width: 100%;
@@ -51,29 +36,36 @@ body {
   position: relative;
 }
 
-#header .dropdown:hover .dropdown-content {
-  display: flex;
+#header .dropdown .dropdown-content {
+  display: none;
   flex-direction: column;
-  gap: 1rem;
+  gap: unset;
   background-color: white;
   border-radius: 8px;
   position: absolute;
-  padding: 1rem;
+  padding-block: 0.25rem;
   top: 100%;
   left: 0;
   min-width: 200px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+#header .dropdown .dropdown-content.show {
+  text-align: center;
+  display: flex;
+}
 #header .dropdown-content li {
-  padding-inline: 100%;
-  text-align: left;
+  /* padding-inline: 100%; */
   padding-block: 0.5rem;
   margin-top: 0.5rem;
 }
 
 #header .dropdown-content li:hover {
-  background-color: bisque;
+  background-color: var(--lightbrown);
+  width: 100%;
+}
+#header .dropdown-toggle span {
+  flex-shrink: 0;
 }
 
 #header .logo-container {
@@ -103,6 +95,9 @@ body {
 #header .nav-menu ul li {
   list-style: none;
 }
+#header .nav-menu ul a {
+  width: 100%;
+}
 
 #header .nav-menu ul li a {
   font-family: var(--bevietnampro);
@@ -112,7 +107,7 @@ body {
 }
 
 #header .contact-us {
-  background-color: brown;
+  background-color: var(--lightbrown);
   border-radius: 500px;
   padding: 0.5rem 1rem;
 }

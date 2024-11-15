@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
-<section id="homepage">
+<section id="homepage" class="homepage">
   <section class="home_landing">
     <div class="home-container">
       <div class="flx-row home-card-wrapper">
 
-        <div class="home-card first-col fade-left">
+        <div class="home-card first-col fade-left delay_200">
           <div class="image-container">
             <img src="<?= RESNPO_IMAGE . '/bg1.png' ?>" alt="bg">
           </div>
@@ -15,7 +15,7 @@
           </div>
         </div>
 
-        <div class="flx-col second-col fade-left delay_200">
+        <div class="flx-col second-col fade-left delay_400">
           <div class="home-card">
             <div class="image-container">
               <img src="<?= RESNPO_IMAGE . '/bg2.png' ?>" alt="bg">
@@ -80,9 +80,9 @@
       <div class="events-slider">
         <?php if ($events->have_posts()) : ?>
           <?php
-          $delay = 0; // Initialize delay
+          $delay = 0;
           while ($events->have_posts()) : $events->the_post();
-            $delay += 100; // Increment delay for each card
+            $delay += 100;
           ?>
             <div class="event-card" data-aos="fade-left" data-aos-delay="<?= $delay ?>">
               <div class="event-image">
@@ -168,63 +168,66 @@
 
   <section id="whatsnew">
     <div class="whatsnew-container">
-      <?php section_title("What's New") ?>
-
-      <?php
-      $whatsnew_args = array(
-        'post_type' => 'whatsNew',
-        'posts_per_page' => 5,
-        'order' => 'ASC',
-        'orderby' => 'date'
-      );
-
-      $whatsnew = new WP_Query($whatsnew_args);
-      ?>
-
-      <div class="news-list flx-col">
+      <div class="global-width">
+        <?php section_title("What's New") ?>
         <?php
-        if ($whatsnew->have_posts()) :
-          $most_recent_post_id = $whatsnew->posts[0]->ID;
-          $delay = 0;
-          while ($whatsnew->have_posts()) : $whatsnew->the_post();
-            $delay += 100;
+        $whatsnew_args = array(
+          'post_type' => 'whatsNew',
+          'posts_per_page' => 5,
+          'order' => 'DESC',
+          'orderby' => 'date'
+        );
+        $whatsnew = new WP_Query($whatsnew_args);
         ?>
-            <div class="news-card flx" data-aos="fade-up" data-aos-delay="<?= $delay ?>">
-              <div class="news-thumbnail">
-                <img src="<?= esc_url(get_the_post_thumbnail_url()) ?>" alt="news">
-              </div>
-              <div class="flx-row ai-c">
-                <div class="news-content">
-                  <?php if (get_the_ID() == $most_recent_post_id) : ?>
-                    <span class="new-tag">NEW</span>
-                  <?php endif; ?>
-                  <div class="event-date whatsnew-date">
-                    <p class="the-date"><?= esc_html(get_the_date()) ?></p>
+        <div class="news-list flx-col">
+          <?php
+          if ($whatsnew->have_posts()) :
+            $most_recent_post_id = $whatsnew->posts[0]->ID;
+            $delay = 0;
+            while ($whatsnew->have_posts()) : $whatsnew->the_post();
+              $delay += 100;
+          ?>
+              <a href="<?= esc_url(get_the_permalink()) ?>" class="news-card" data-aos="fade-up" data-aos-delay="<?= $delay ?>">
+                <div class="flx jc-sb">
+                  <div class="flx-row">
+                    <div class="news-thumbnail">
+                      <img src="<?= esc_url(get_the_post_thumbnail_url()) ?>" alt="news">
+                    </div>
+                    <div class="flx-row ai-c">
+                      <div class="news-content">
+                        <?php if (get_the_ID() == $most_recent_post_id) : ?>
+                          <span class="new-tag">NEW</span>
+                        <?php endif; ?>
+                        <div class="event-date whatsnew-date">
+                          <p class="the-date"><?= esc_html(get_the_date()) ?></p>
+                        </div>
+                        <div>
+                          <h3 class="the-title"><?= esc_html(get_the_title()) ?></h3>
+                          <?php $excerpt = esc_html(get_the_excerpt()) ?>
+                          <p class="the-excerpt"><?= truncate_text($excerpt, 10) ?></p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h3 class="the-title"><?= esc_html(get_the_title()) ?></h3>
-                    <p class="the-excerpt"><?= esc_html(get_the_excerpt()) ?></p>
+                  <div class="flx ai-c jc-c">
+                    <div class="news-redirect">
+                      <img src="<?= RESNPO_IMAGE . '/link-out.png' ?>" alt="">
+                    </div>
                   </div>
                 </div>
-                <div class="news-redirect">
-                  <a href="<?= esc_url(get_the_permalink()) ?>">
-                    <img src="<?= RESNPO_IMAGE . '/link-out.png' ?>" alt="">
-                  </a>
-                </div>
-              </div>
-            </div>
-          <?php endwhile; ?>
-          <?php wp_reset_postdata(); ?>
-        <?php endif; ?>
-      </div>
-
-      <div class="see-button">
-        <button type="button" class="short-button bg-lbrown c-white">
-          <p class="ai-c flx jc-sb">すべてを見る
-            <span> <?= file_get_contents(RESNPO_SVG . '/play.svg') ?>
-          </p>
-          </span>
-        </button>
+              </a>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+          <?php endif; ?>
+        </div>
+        <div class="see-button">
+          <button type="button" class="short-button bg-lbrown c-white">
+            <p class="ai-c flx jc-sb">すべてを見る
+              <span> <?= file_get_contents(RESNPO_SVG . '/play.svg') ?>
+            </p>
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -253,13 +256,9 @@
               </span>
             </button>
           </div>
-
-
         </div>
-
       </div>
     </div>
-
   </section>
 
   <section id="adviser">
@@ -402,7 +401,11 @@
           </button>
         </div>
         <div class="map" data-aos="fade-up">
-          <iframe id="map-frame" src="https://maps.google.com/?q=愛媛県松山市平井町1426番地2&output=embed" frameborder="0"></iframe>
+          <iframe
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            id="map-frame" src="https://maps.google.com/?q=愛媛県松山市平井町1426番地2&output=embed" frameborder="0">
+          </iframe>
         </div>
       </div>
     </div>
