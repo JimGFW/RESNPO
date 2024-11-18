@@ -10,7 +10,7 @@
         </button>
       </div>
       <div class="flx jc-sb footer-content">
-        <div class="col-1">
+        <div class="col-1 flx-col">
           <a href="<?= site_url() ?>"><img src="<?= RESNPO_IMAGE . '/res-logo.png' ?>" alt="res-logo"></a>
           <span>愛媛県松山市平井町1426番地2</span>
         </div>
@@ -22,7 +22,7 @@
             <div class="nav-links">
               <ul>
                 <li><a href="<?= site_url() ?>">Home</a></li>
-                <li><a href="<?= site_url() . '/projects' ?>">Projects</a></li>
+                <!-- <li><a href="<?= site_url() . '/projects' ?>">Projects</a></li> -->
                 <li><a href="<?= site_url() . '/about' ?>">About Us</a></li>
                 <li><a href="<?= site_url() . '/join' ?>">Join Us</a></li>
                 <li><a href="<?= site_url() . '/corporate' ?>">Corporate/Schools</a></li>

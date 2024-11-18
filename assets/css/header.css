@@ -43,7 +43,7 @@ body {
     border-radius: 8px;
     position: absolute;
     padding-block: 0.25rem;
-    top: 100%;
+    top: 3.125rem;
     left: 0;
     min-width: 200px;
     box-shadow: inset 0px 2px 32px -10px #00000029;
@@ -60,6 +60,7 @@ body {
   .dropdown-content a:hover {
     background-color: var(--lightbrown);
     color: #fff;
+    border-radius: 12px;
     /* width: 100%; */
   }
   .dropdown-toggle span {
