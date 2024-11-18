@@ -1,6 +1,6 @@
 AOS.init({
   startEvent: "load",
-  offset: 200,
+  offset: 50,
   once: false,
 });
 

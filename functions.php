@@ -56,5 +56,20 @@ function truncate_text($text, $limit)
     return $text;
   }
 }
+
+// footer copyright
+add_filter('widget_text', 'do_shortcode');
+
+function year_shortcode()
+{
+  $year = date_i18n('Y');
+  return $year;
+}
+add_shortcode('year', 'year_shortcode');
+
+// hide admin
+add_filter('show_admin_bar', '__return_false');
+
+
 // Include custom main.php file
 require_once(RESNPO_DIR . '/custom/main.php');

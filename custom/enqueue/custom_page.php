@@ -19,6 +19,46 @@ function add_custom_page()
       'post_type' => 'page',
       'post_name' => 'about'
     ),
+    array(
+      'post_title' => 'Contact',
+      'post_content' => 'contact',
+      'post_status' => 'publish',
+      'post_author' => 1,
+      'post_type' => 'page',
+      'post_name' => 'contact'
+    ),
+    array(
+      'post_title' => 'SDG',
+      'post_content' => 'sdg',
+      'post_status' => 'publish',
+      'post_author' => 1,
+      'post_type' => 'page',
+      'post_name' => 'sdg'
+    ),
+    array(
+      'post_title' => 'Study Abroad',
+      'post_content' => 'study-abroad',
+      'post_status' => 'publish',
+      'post_author' => 1,
+      'post_type' => 'page',
+      'post_name' => 'study-abroad'
+    ),
+    array(
+      'post_title' => 'Donation',
+      'post_content' => 'donation',
+      'post_status' => 'publish',
+      'post_author' => 1,
+      'post_type' => 'page',
+      'post_name' => 'donation'
+    ),
+    array(
+      'post_title' => 'Membership',
+      'post_content' => 'membership',
+      'post_status' => 'publish',
+      'post_author' => 1,
+      'post_type' => 'page',
+      'post_name' => 'membership'
+    ),
 
   );
 

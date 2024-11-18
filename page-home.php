@@ -24,10 +24,10 @@
                 <h1>ひとりでも多くの子どもたちが、
                   未来の可能性を芸術で表現できる社会を目指して</h1>
                 <div>
-                  <a href="<?= home_url() . '/about' ?>">
+                  <a href="<?= site_url() . '/about' ?>">
                     <button type="button" class="x-short-button c-black bg-white">
                       <p class="ai-c flx jc-sb">詳しく見る
-                        <span> <?= file_get_contents(RESNPO_SVG . '/redirect.svg') ?>
+                        <span> <?= SVG_redirect ?>
                       </p>
                       </span>
                     </button>
@@ -44,10 +44,10 @@
                 <h2>Projects</h2>
                 <h1>「SDGs甲子園」の過去実績 をご 紹介します。</h1>
                 <div>
-                  <a href="<?= home_url() . '/projects' ?>">
+                  <a href="<?= site_url() . '/projects' ?>">
                     <button type="button" class="x-short-button c-black bg-white">
                       <p class="ai-c flx jc-sb">詳しく見る
-                        <span> <?= file_get_contents(RESNPO_SVG . '/redirect.svg') ?>
+                        <span> <?= SVG_redirect ?>
                       </p>
                       </span>
                     </button>
@@ -103,7 +103,7 @@
                     <p><?= esc_html(get_the_excerpt()) ?></p>
                   </div>
                   <button class="button-style-reset brown-play" type="button">
-                    <span> <?= file_get_contents(RESNPO_SVG . '/play-brown.svg') ?>
+                    <span> <?= SVG_play_brown ?>
                     </span>
                   </button>
                 </div>
@@ -204,7 +204,7 @@
                         <div>
                           <h3 class="the-title"><?= esc_html(get_the_title()) ?></h3>
                           <?php $excerpt = esc_html(get_the_excerpt()) ?>
-                          <p class="the-excerpt"><?= truncate_text($excerpt, 10) ?></p>
+                          <p class="the-excerpt"><?= truncate_text($excerpt, 150) ?></p>
                         </div>
                       </div>
                     </div>
@@ -223,7 +223,7 @@
         <div class="see-button">
           <button type="button" class="short-button bg-lbrown c-white">
             <p class="ai-c flx jc-sb">すべてを見る
-              <span> <?= file_get_contents(RESNPO_SVG . '/play.svg') ?>
+              <span> <?= SVG_play ?>
             </p>
             </span>
           </button>
@@ -238,7 +238,7 @@
 
         <div class="rxl-content flx-row jc-sb">
           <div class="svg-quote">
-            <?= file_get_contents(RESNPO_SVG . '/quote.svg') ?>
+            <?= SVG_quote ?>
           </div>
           <div class="rxl-img-banner">
             <img src="<?= RESNPO_IMAGE . '/home/rxl-mori.png' ?>" alt="realxlink">
@@ -251,7 +251,7 @@
 
             <button type="button" class="short-button bg-white c-lbrown" data-aos="fade-right">
               <p class="ai-c flx jc-sb">詳しく見る
-                <span> <?= file_get_contents(RESNPO_SVG . '/play-brown-sm.svg') ?>
+                <span> <?= SVG_play_brown_sm ?>
               </p>
               </span>
             </button>
@@ -274,7 +274,7 @@
                 <p class="span-subtitle">特別顧問</p>
                 <button type="button" class="long-button c-white bg-lbrown">
                   <p class="ai-c flx jc-sb">プロフィールを見る
-                    <span> <?= file_get_contents(RESNPO_SVG . '/play.svg') ?>
+                    <span> <?= SVG_play ?>
                   </p>
                   </span>
                 </button>
@@ -340,7 +340,7 @@
           <div class="support-button">
             <button type="button" class="short-button bg-lbrown c-white">
               <p class="ai-c flx jc-sb">すべてを見る
-                <span> <?= file_get_contents(RESNPO_SVG . '/play.svg') ?>
+                <span> <?= SVG_play ?>
               </p>
               </span>
             </button>
@@ -389,15 +389,15 @@
         <div class="location-card-wrapper flx-row jc-sa">
           <button class="location-card flx jc-sb" data-location="https://maps.google.com/?q=愛媛県松山市平井町1426番地2&output=embed" data-aos="fade-up">
             <h3>愛媛県松山市平井町1426番地2 </h3>
-            <span><?= file_get_contents(RESNPO_SVG . '/play-brown.svg') ?></span>
+            <span><?= SVG_play_brown ?></span>
           </button>
           <button class="location-card flx jc-sb" data-location="https://maps.google.com/?q=島根県隠岐郡西ノ島町大字浦郷３１&output=embed" data-aos="fade-up">
             <h3>島根県隠岐郡西ノ島町大字浦郷３１ </h3>
-            <span><?= file_get_contents(RESNPO_SVG . '/play-brown.svg') ?></span>
+            <span><?= SVG_play_brown ?></span>
           </button>
           <button class="location-card flx jc-sb" data-location="https://maps.google.com/?q=5/F PAFCPIC Building, Taft North, Brgy. Buhang, Mandurriao, Iloilo City, Iloilo, Philippines&output=embed" data-aos="fade-up">
             <h3>5/F PAFCPIC Building, Taft North, Brgy. Buhang, Mandurriao, Iloilo City, Iloilo, Philippines </h3>
-            <span><?= file_get_contents(RESNPO_SVG . '/play-brown.svg') ?></span>
+            <span><?= SVG_play_brown ?></span>
           </button>
         </div>
         <div class="map" data-aos="fade-up">

@@ -18,63 +18,71 @@
   <header id="header" class="flx jc-sa global-width">
 
     <div class="header-container flx fade-down">
-      <div class="logo-container">
-        <a href="<?= home_url() ?>"><img src="<?= RESNPO_IMAGE . '/res-logo.png' ?>" alt="header-logo"></a>
+      <div class="logo-container flx ai-c">
+        <a href="<?= site_url() ?>"><img src="<?= RESNPO_IMAGE . '/res-logo.png' ?>" alt="header-logo"></a>
       </div>
       <nav class="nav-menu flx">
         <ul class="flx">
-          <li>
-            <a href="<?= home_url() ?>">Home</a>
+          <li class="<?php if (is_page('home')) echo 'nav-active'; ?>">
+            <a href="<?= site_url() ?>">Home</a>
           </li>
-          <li>
-            <a href="<?= home_url('/about') ?>">About Us</a>
+          <li class="<?php if (is_page('about')) echo 'nav-active'; ?>">
+            <a href="<?= site_url('/about') ?>">About Us</a>
           </li>
-          <li class="dropdown">
+          <li class="dropdown <?php if (is_page('sdg') || is_page('study-abroad')) echo 'nav-active'; ?>">
             <a class="dropdown-toggle flx ai-c" href="javascript:void(0);">
               <span>Projects</span>
               <span>
-                <?= file_get_contents(RESNPO_SVG . '/chevron-down.svg'); ?>
+                <?= SVG_chev_down ?>
               </span>
             </a>
             <ul class="dropdown-content">
-              <a href="<?= home_url() . '/sdg' ?>">
+              <a href="<?= site_url() . '/sdg' ?>">
                 <li>SDG</li>
+                <span><?= SVG_play_brown_xs ?></span>
               </a>
-              <a href="<?= home_url() . '/study-abroad' ?>">
+              <hr>
+              <a href="<?= site_url() . '/study-abroad' ?>">
                 <li>Study Abroad</li>
+                <span><?= SVG_play_brown_xs ?></span>
               </a>
-
             </ul>
           </li>
-          <li class="dropdown">
+          <li class="dropdown <?php if (is_page('donation') || is_page('membership') || is_page('whatsnew')) ?>">
             <a class="dropdown-toggle flx ai-c" href="javascript:void(0);">
               <span>Join Us</span>
               <span>
-                <?= file_get_contents(RESNPO_SVG . '/chevron-down.svg'); ?>
+                <?= SVG_chev_down ?>
               </span>
             </a>
             <ul class="dropdown-content">
-              <a href="<?= home_url() . '/donation' ?>">
+              <a href="<?= site_url() . '/donation' ?>">
                 <li>Donation</li>
+                <span><?= SVG_play_brown_xs ?></span>
               </a>
-              <a href="<?= home_url() . '/membership' ?>">
+              <a href="<?= site_url() . '/membership' ?>">
                 <li>Membership</li>
+                <span><?= SVG_play_brown_xs ?></span>
               </a>
-              <a href="<?= home_url() . '/whatsnew' ?>">
+              <a href="<?= site_url() . '/whatsnew' ?>">
                 <li>What's New</li>
+                <span><?= SVG_play_brown_xs ?></span>
               </a>
             </ul>
           </li>
-          <li>
-            <a href="<?= home_url() . '/corporate' ?>">Corporate/School</a>
+          <li class="<?php if (is_page('corporate')) echo 'nav-active'; ?>">
+            <a href="<?= site_url() . '/corporate' ?>">Corporate/School</a>
           </li>
-          <li id="contact" class="contact-us">
-            <a class="flx jc-c ai-c" href="<?= home_url() . '/contact' ?>">
+        </ul>
+        <ul class="flx">
+          <li id="contact" class="contact-us <?php if (is_page('contact')) ?>">
+            <a class="flx jc-c ai-c" href="<?= site_url() . '/contact' ?>">
               <span>Contact Us</span>
               <span>
-                <?= file_get_contents(RESNPO_SVG . '/tel.svg'); ?>
+                <?= SVG_tel ?>
               </span>
             </a>
+          </li>
         </ul>
       </nav>
     </div>
