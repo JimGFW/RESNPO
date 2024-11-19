@@ -42,15 +42,20 @@ document.addEventListener("DOMContentLoaded", function () {
     content.addEventListener("mouseover", function () {
       const playIcon = content.querySelector("span");
       if (playIcon) {
-        playIcon.innerHTML =
-          '<svg width="40" height="40" viewBox="0 0 40 40" fill="none" id="svg-55190279_572" class="padding-indicator" style="--padding-box-shadow: inset 0 0px 0 0 var(--light-green), inset -0px 0 0 0 var(--light-green), inset 0 -0px 0 0 var(--light-green), inset 0px 0 0 0 var(--light-green); --hover-padding-box-shadow: inset 0 0px 0 0 var(--dark-green), inset -0px 0 0 0 var(--dark-green), inset 0 -0px 0 0 var(--dark-green), inset 0px 0 0 0 var(--dark-green);"><circle opacity="0.5" cx="20" cy="20" r="20" fill="#AA402A" class="padding-indicator" style="--padding-box-shadow: inset 0 0px 0 0 var(--light-green), inset -0px 0 0 0 var(--light-green), inset 0 -0px 0 0 var(--light-green), inset 0px 0 0 0 var(--light-green); --hover-padding-box-shadow: inset 0 0px 0 0 var(--dark-green), inset -0px 0 0 0 var(--dark-green), inset 0 -0px 0 0 var(--dark-green), inset 0px 0 0 0 var(--dark-green);"></circle><circle cx="20" cy="20" r="16" fill="#AA402A" class="padding-indicator" style="--padding-box-shadow: inset 0 0px 0 0 var(--light-green), inset -0px 0 0 0 var(--light-green), inset 0 -0px 0 0 var(--light-green), inset 0px 0 0 0 var(--light-green); --hover-padding-box-shadow: inset 0 0px 0 0 var(--dark-green), inset -0px 0 0 0 var(--dark-green), inset 0 -0px 0 0 var(--dark-green), inset 0px 0 0 0 var(--dark-green);"></circle><path d="M19.6133 24.3867L23.0666 20.9333C23.1902 20.81 23.2883 20.6635 23.3552 20.5022C23.4221 20.3409 23.4565 20.168 23.4565 19.9933C23.4565 19.8187 23.4221 19.6458 23.3552 19.4845C23.2883 19.3232 23.1902 19.1767 23.0666 19.0533L19.6133 15.6C18.7733 14.7733 17.3333 15.36 17.3333 16.5467V23.44C17.3333 24.64 18.7733 25.2267 19.6133 24.3867Z" fill="white" class="padding-indicator" style="--padding-box-shadow: inset 0 0px 0 0 var(--light-green), inset -0px 0 0 0 var(--light-green), inset 0 -0px 0 0 var(--light-green), inset 0px 0 0 0 var(--light-green); --hover-padding-box-shadow: inset 0 0px 0 0 var(--dark-green), inset -0px 0 0 0 var(--dark-green), inset 0 -0px 0 0 var (--dark-green), inset 0px 0 0 0 var(--dark-green);"></path></svg>';
+        playIcon.innerHTML = `
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="10" cy="10" r="10" fill="#ffffff"/> <!-- Brown Circle -->
+  <path d="M9.75828 12.7418L11.9166 10.5834C11.9939 10.5063 12.0552 10.4148 12.097 10.314C12.1388 10.2131 12.1603 10.1051 12.1603 9.99593C12.1603 9.88679 12.1388 9.77872 12.097 9.67791C12.0552 9.5771 11.9939 9.48553 11.9166 9.40843L9.75828 7.2501C9.23328 6.73343 8.33328 7.1001 8.33328 7.84176V12.1501C8.33328 12.9001 9.23328 13.2668 9.75828 12.7418Z" fill="#AA402A"/> <!-- White Triangle -->
+</svg>
+
+        `;
       }
     });
 
     content.addEventListener("mouseout", function () {
       const playIcon = content.querySelector("span");
       if (playIcon) {
-        playIcon.innerHTML = originalContent; // Reset to the original content
+        playIcon.innerHTML = originalContent;
       }
     });
   });

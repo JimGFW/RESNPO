@@ -117,6 +117,7 @@
   }
 
   /* !!EVENTS _>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
   .event-card {
     width: 28.75rem;
     background-color: #fff;
@@ -357,30 +358,6 @@
     cursor: pointer;
     outline: none;
     box-shadow: none;
-  }
-
-  .section-title {
-    gap: 1rem;
-    padding: 5rem 0 2rem 0;
-  }
-
-  .section-title h1 {
-    font-family: var(--bevietnampro);
-    font-size: 1.5rem;
-    line-height: 1;
-  }
-
-  .span-subtitle {
-    vertical-align: bottom;
-    color: var(--lightbrown);
-    font-weight: 700;
-  }
-
-  .section-subtitle {
-    align-self: flex-end;
-    line-height: 2;
-    color: var(--lightbrown);
-    font-size: 1.25rem;
   }
 
   .adviser-content {

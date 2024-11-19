@@ -67,7 +67,7 @@ function year_shortcode()
 }
 add_shortcode('year', 'year_shortcode');
 
-// hide admin
+// hide admin bar
 add_filter('show_admin_bar', '__return_false');
 
 

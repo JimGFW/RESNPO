@@ -1,0 +1,43 @@
+#study_abroad {
+  .impressions-container .section-title {
+    padding: 0 5rem 3rem 5rem;
+  }
+
+  .impressions-slider {
+    width: 100%;
+  }
+
+  .impression-image {
+    width: 30.875rem;
+    /* height: min(auto, 574px); */
+    height: 80vh;
+  }
+
+  .impression-image img {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .impressions-slider-images {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #impressions .slick-slide {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .impressions-slider {
+    width: 100%;
+  }
+
+  .slick-center {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+}

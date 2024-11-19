@@ -85,35 +85,36 @@
             $delay += 100;
           ?>
             <div class="event-card" data-aos="fade-left" data-aos-delay="<?= $delay ?>">
-              <div class="event-image">
-                <img src="<?= esc_url(get_the_post_thumbnail_url()) ?>" alt="event">
-              </div>
-              <div class="event-content">
-                <?php
-                $event_date = get_post_meta(get_the_ID(), '_event_date', true);
-                if ($event_date) :
-                ?>
-                  <div class="event-date">
-                    <p>WHEN: <?= esc_html($event_date) ?></p>
-                  </div>
-                <?php endif; ?>
-                <div class="flx-row event-caption">
-                  <div class="title-content">
-                    <h3><?= esc_html(get_the_title()) ?></h3>
-                    <p><?= esc_html(get_the_excerpt()) ?></p>
-                  </div>
-                  <button class="button-style-reset brown-play" type="button">
-                    <span> <?= SVG_play_brown ?>
-                    </span>
-                  </button>
+              <a href="<?= esc_url(get_the_post_thumbnail_url()) ?>" class="glightbox" data-title="<?= esc_html(get_the_title()) ?>" data-description="<?= esc_html(get_the_excerpt()) ?>">
+                <div class="event-image">
+                  <img src="<?= esc_url(get_the_post_thumbnail_url()) ?>" alt="event">
                 </div>
-              </div>
+                <div class="event-content">
+                  <?php
+                  $event_date = get_post_meta(get_the_ID(), '_event_date', true);
+                  if ($event_date) :
+                  ?>
+                    <div class="event-date">
+                      <p>WHEN: <?= esc_html($event_date) ?></p>
+                    </div>
+                  <?php endif; ?>
+                  <div class="flx-row event-caption">
+                    <div class="title-content">
+                      <h3><?= esc_html(get_the_title()) ?></h3>
+                      <p><?= esc_html(get_the_excerpt()) ?></p>
+                    </div>
+                    <button class="button-style-reset brown-play" type="button">
+                      <span> <?= SVG_play_brown ?>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </a>
             </div>
           <?php endwhile; ?>
           <?php wp_reset_postdata(); ?>
         <?php endif; ?>
       </div>
-
     </div>
   </section>
 
