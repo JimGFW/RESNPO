@@ -83,6 +83,7 @@ footer .section-title {
   margin-bottom: 0.75rem;
   font-family: var(--bevietnampro);
   font-weight: 600;
+  padding: 0;
   /* font-size: 24px; */
 }
 

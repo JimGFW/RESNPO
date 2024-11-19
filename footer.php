@@ -24,7 +24,6 @@
                 <li><a href="<?= site_url() ?>">Home</a></li>
                 <!-- <li><a href="<?= site_url() . '/projects' ?>">Projects</a></li> -->
                 <li><a href="<?= site_url() . '/about' ?>">About Us</a></li>
-                <li><a href="<?= site_url() . '/join' ?>">Join Us</a></li>
                 <li><a href="<?= site_url() . '/corporate' ?>">Corporate/Schools</a></li>
               </ul>
             </div>

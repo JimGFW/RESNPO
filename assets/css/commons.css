@@ -37,6 +37,12 @@ html {
 .jc-sa {
   justify-content: space-around;
 }
+.jc-fe {
+  justify-content: flex-end;
+}
+.jc-fs {
+  justify-content: flex-start;
+}
 .ai-c {
   align-items: center;
 }
@@ -138,7 +144,7 @@ a {
 
 .section-title {
   gap: 1rem;
-  padding: 5rem 0 2rem 0;
+  padding: 5rem 2.5rem;
 }
 
 .section-title h1 {

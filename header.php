@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <header id="header" class="flx jc-sa global-width">
+  <header id="header" class="flx jc-sa">
 
     <div class="header-container flx fade-down">
       <div class="logo-container flx ai-c">
