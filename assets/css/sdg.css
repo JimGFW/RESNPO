@@ -1,0 +1,29 @@
+.sdgPage {
+  background-color: #f5f5f5;
+
+  .landing-content {
+    padding: 7.5rem 5rem 3rem 5rem;
+  }
+
+  .landing-image {
+    width: 100%;
+  }
+  .landing-image img {
+    width: 100%;
+  }
+  .landing-content {
+    margin-bottom: 2rem;
+    max-width: 60%;
+  }
+  .landing-content h1 {
+    font-family: var(--bevietnampro);
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .landing-content p {
+    font-family: var(--notosansjp);
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+}

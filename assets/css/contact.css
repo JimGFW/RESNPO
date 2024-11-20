@@ -1,5 +1,6 @@
 .contactPage {
   background-image: url("../image/contact/wavy-vector.png");
+  background-size: cover;
   min-height: 797px;
 
   .section-title {
