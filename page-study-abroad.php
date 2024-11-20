@@ -1,6 +1,6 @@
 <?php get_header() ?>
 
-<section id="study_abroad">
+<section id="study_abroad" class="header-height">
   <section id="impressions">
     <div class="impressions-container">
       <?php section_title('参加者の感想') ?>

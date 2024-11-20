@@ -1,3 +1,4 @@
+</main>
 <footer>
   <div class="footer-container" data-aos="fade-up">
     <div class="global-width">
@@ -72,7 +73,7 @@
     </div>
   </div>
 </footer>
-</main>
+
 </body>
 
 </html>

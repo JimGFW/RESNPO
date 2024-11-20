@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "bevietnampro";
+  font-family: "Be Vietnam Pro";
   src: url("../fonts/BeVietnamPro-Regular.ttf") format("truetype");
 }
 
@@ -10,15 +10,18 @@
 } */
 
 @font-face {
-  font-family: "NotoSansJP";
+  font-family: "Noto Sans JP";
   src: url("../fonts/NotoSansJP-Regular.ttf") format("opentype");
 }
 
 :root {
-  --bevietnampro: "bevietnampro", sans-serif;
+  --bevietnampro: "Be Vietnam Pro", sans-serif;
   --bevietnampro-bold: "bevietnampro", sans-serif;
-  --notosansjp: "NotoSansJP", sans-serif;
+  --notosansjp: "Noto Sans JP", sans-serif;
 
   --lightbrown: #aa402a;
+  --brown: #cc5036;
   --darkbrown: #40170f;
+  --whitebrown: #fdf5f3;
+  --gray: #454545;
 }

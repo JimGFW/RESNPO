@@ -26,7 +26,7 @@
           <li class="<?php if (is_page('home')) echo 'nav-active'; ?>">
             <a href="<?= site_url() ?>">Home</a>
           </li>
-          <li class="<?php if (is_page('about')) echo 'nav-active'; ?>">
+          <li class="<?php if (is_page('about') || is_page('contact')) echo 'nav-active'; ?>">
             <a href="<?= site_url('/about') ?>">About Us</a>
           </li>
           <li class="dropdown <?php if (is_page('sdg') || is_page('study-abroad')) echo 'nav-active'; ?>">
@@ -48,7 +48,7 @@
               </a>
             </ul>
           </li>
-          <li class="dropdown <?php if (is_page('donation') || is_page('membership') || is_page('whatsnew')) ?>">
+          <li class="dropdown <?php if (is_page('donation') || is_page('membership') || is_page('whatsnew')) echo 'nav-active' ?>">
             <a class="dropdown-toggle flx ai-c" href="javascript:void(0);">
               <span>Join Us</span>
               <span>
@@ -75,7 +75,7 @@
           </li>
         </ul>
         <ul class="flx">
-          <li id="contact" class="contact-us <?php if (is_page('contact')) ?>">
+          <li id="contact" class="contact-us">
             <a class="flx jc-c ai-c" href="<?= site_url() . '/contact' ?>">
               <span>Contact Us</span>
               <span>

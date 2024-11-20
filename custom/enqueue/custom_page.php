@@ -59,6 +59,14 @@ function add_custom_page()
       'post_type' => 'page',
       'post_name' => 'membership'
     ),
+    array(
+      'post_title' => 'Corporate',
+      'post_content' => 'corporaterate',
+      'post_status' => 'publish',
+      'post_author' => 1,
+      'post_type' => 'page',
+      'post_name' => 'corporate'
+    ),
 
   );
 

@@ -1,5 +1,6 @@
 #about {
   .vision-mission-container,
+  .adviser-container,
   .landing-container {
     padding: 7.5rem 5rem 3rem 5rem;
   }
@@ -117,5 +118,180 @@
     justify-content: flex-start;
     align-items: flex-end;
     padding: 5rem;
+  }
+
+  /* !!Representative Message _>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+  .rep-message-container {
+    background-color: #fff;
+  }
+  .rep-banner {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+    background-image: url("../image/about/rep-message-bg.png");
+    height: 37.5rem;
+  }
+
+  .rep-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 12.34%,
+      rgba(0, 0, 0, 0.8) 99.94%
+    );
+    z-index: 1;
+  }
+  .rep-message-content {
+    color: #fff;
+    padding-left: 50%;
+    padding-right: 2rem;
+    padding-bottom: 6rem;
+    z-index: 1;
+  }
+
+  .rep-message-content h5 {
+    font-family: var(--bevietnampro);
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .rep-message-content h1 {
+    font-family: var(--notosansjp);
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .rep-message-content p {
+    font-family: var(--notosansjp);
+    font-size: 1.5rem;
+    font-weight: 500;
+    gap: 1rem;
+  }
+  .long-message {
+    padding: 2.5rem 7.5rem 3.125rem 3.75rem;
+    width: 50%; /* Occupy 50% of the width */
+  }
+  .long-message p {
+    font-family: var(--notosansjp);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26.06px;
+  }
+
+  .message-img-banner img {
+    height: 100%;
+    width: 100%;
+  }
+  .message-img-banner {
+    width: 50%; /* Occupy 50% of the width */
+  }
+
+  /* !!Adviser _>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+  .adviser-container {
+    padding: 0 5rem 3rem 5rem;
+  }
+  .adviser-bottom-content {
+    gap: 1rem;
+  }
+  .bottom-card {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    gap: 1rem;
+    flex-basis: 50%;
+    width: 100%; /* Stretch the bottom card to occupy full width */
+  }
+  .bottom-card ul {
+    padding-left: 2rem;
+  }
+  .bottom-card h3 {
+    color: var(--brown);
+    font-family: var(--bevietnampro);
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .bottom-card ul li {
+    color: var(--gray);
+    font-family: var(--notosansjp);
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+  .main-content-wrapper {
+    gap: 1rem;
+  }
+  .long-description {
+    margin-top: 1rem;
+    text-align: left;
+    color: var(--gray);
+  }
+  .credential-card ul {
+    margin-top: 1rem;
+    padding-left: 1rem;
+  }
+  .credential-card ul li {
+    color: var(--gray);
+    font-family: var(--notosansjp);
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+
+  /* !!Outline _>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+  .outline-container {
+    background-color: #f6f6f6;
+    padding: 0 0 0 5rem;
+  }
+  .outline-columns {
+    gap: 1rem;
+  }
+  .outline-col-1,
+  .outline-col-2 {
+    width: 50%;
+  }
+  .outline-col-1 {
+    padding-bottom: 3rem;
+  }
+  .outline-col-2 {
+    background-image: url("../image/about/wavy-vector.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem;
+  }
+  .outline-row {
+    gap: 1.25rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e7e7e7;
+  }
+  .outline-row:last-child {
+    border-bottom: none;
+  }
+  .row-label {
+    font-family: var(--notosansjp);
+    font-size: 1rem;
+    font-weight: 700;
+    width: 80px;
+    color: var(--lightbrown);
+  }
+  .row-value {
+    font-family: var(--notosansjp);
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+  .reports-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .reports-card .section-title {
+    padding-top: 0;
+    padding-bottom: 1rem;
   }
 }

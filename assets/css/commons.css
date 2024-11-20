@@ -46,6 +46,12 @@ html {
 .ai-c {
   align-items: center;
 }
+.ai-fe {
+  align-items: flex-end;
+}
+.ai-fs {
+  align-items: flex-start;
+}
 
 .p-0_5 {
   padding: 0.125rem;
@@ -111,15 +117,6 @@ html {
   font-weight: 400;
   gap: 2rem;
 }
-
-/* .long-button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-top: 1rem;
-} */
-
 .long-button {
   padding: 0.5rem 1rem;
   border-radius: 500px;
@@ -135,6 +132,10 @@ html {
 .long-button svg {
   width: 24px;
   height: 24px;
+}
+
+.full-width {
+  width: calc(100% - 2rem);
 }
 
 a {
@@ -159,9 +160,121 @@ a {
   font-weight: 700;
 }
 
-.section-subtitle {
-  align-self: flex-end;
-  line-height: 2;
-  color: var(--lightbrown);
-  font-size: 1.25rem;
+.header-height {
+  padding-top: 4.75rem;
+}
+
+/* REUSBALE SECTIONS */
+#homepage,
+#about {
+  /* !!Adviser _>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+  /* Reset button styles */
+  .button-style-reset {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .adviser-content {
+    display: flex;
+    gap: 2rem;
+    min-height: 100%;
+  }
+
+  .adviser-col-wrapper {
+    width: 45%;
+    position: relative;
+    border-radius: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .adviser-img {
+    background-color: #fbe9e5;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 2rem;
+  }
+
+  .adviser-img img {
+    width: 90%;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+
+  .adviser-description {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    /* margin: 1rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: -2rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .adviser-description h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .adviser-credentials {
+    width: 60%;
+    gap: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .credential-card {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 0.75rem;
+    padding: 0.75rem 1.25rem 0.75rem 0.75rem;
+    gap: 1rem;
+    flex: 1;
+  }
+
+  .credential-card h3 {
+    font-family: var(--notosansjp);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .credential-card p {
+    font-family: var(--bevietnampro);
+    font-weight: 500;
+    color: #666;
+  }
+
+  .cred-image {
+    border: 10px solid #e7e7e7;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+  }
+
+  .cred-image img {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
 }

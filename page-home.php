@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<section id="homepage" class="homepage">
+<section id="homepage" class="homepage header-height">
   <section class="home_landing">
-    <div class="home-container">
+    <div class="home-container ">
       <div class="flx-row home-card-wrapper">
 
         <div class="home-card first-col fade-left delay_200">
