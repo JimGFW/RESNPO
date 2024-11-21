@@ -11,11 +11,11 @@
     </div>
   </section>
 
-  <section id="perks">
-    <div class="perks-container">
+  <section id="dm-section-2">
+    <div class="dm-section-2-container">
       <div class="global-width">
-        <div class="perks-content">
-          <div class="perks-top-content">
+        <div class="dm-section-2-content">
+          <div class="dm-section-2-top-content">
             <h1>あなたの寄付が子どもたちの <br> 世界を拡げ輝かせます</h1>
             <p>
               刻一刻と変化する今の時代。子どもたちは、私たちがそうだった頃とは異なる環境に身を置き多種多様なスキルや能力 <br>
