@@ -79,59 +79,51 @@ html {
 .bg-white {
   background-color: #fff;
 }
-
-.long-button,
-.short-button,
-.white-short-button {
-  border: none;
-}
-
-.short-button {
+.button {
   padding: 0.5rem 1rem;
   border-radius: 500px;
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 700;
   cursor: pointer;
-  width: 10.3125rem;
-  margin-top: 1rem;
-}
-
-.x-short-button {
-  padding: 0.5rem 1rem;
-  border-radius: 500px;
-  font-size: 1rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  cursor: pointer;
-  max-width: 130px;
   margin-top: 1rem;
   border: none;
 }
 
-.long-button p,
-.short-button p,
-.x-short-button p {
+.button p {
   font-size: 1rem;
   font-family: var(--notosansjp);
   font-weight: 400;
   gap: 2rem;
 }
-.long-button {
-  padding: 0.5rem 1rem;
-  border-radius: 500px;
-  font-size: 1rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  cursor: pointer;
+
+.button--short {
+  width: 10.3125rem;
+}
+
+.button--x-short {
+  max-width: 130px;
+}
+
+.button--long {
   width: 15.125rem;
-  margin-top: 1rem;
-  border-color: unset;
 }
 
 .long-button svg {
   width: 24px;
   height: 24px;
+}
+
+.button-style-reset {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
 }
 
 .full-width {
@@ -169,17 +161,6 @@ a {
 #about {
   /* !!Adviser _>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
   /* Reset button styles */
-  .button-style-reset {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    font: inherit;
-    color: inherit;
-    cursor: pointer;
-    outline: none;
-    box-shadow: none;
-  }
 
   .adviser-content {
     display: flex;
@@ -276,5 +257,111 @@ a {
     height: 100%;
     width: 100%;
     object-fit: contain;
+  }
+}
+#donationPage,
+#membershipPage {
+  /* !!dm-section-2 _>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+  .dm-section-2-container {
+    padding: 0 11.75rem 3rem;
+  }
+  .dm-section-2-container .section-title {
+    padding-left: 0;
+    padding-bottom: 1rem;
+  }
+  .dm-section-2-top-content h1 {
+    font-family: var(--bevietampro);
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .dm-section-2-top-content p {
+    font-family: var(--notosansjp);
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 26.06px;
+  }
+
+  .opportunity-card {
+    border: 1px solid #ccc;
+    padding: 1.25rem;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    padding: 2.5rem 2rem;
+  }
+  .opportunity-card h2 {
+    margin-bottom: 0.25rem;
+    font-family: var(--notosansjp);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 28.96px;
+    color: var(--textcolor);
+  }
+  .opportunity-card img {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1.5rem;
+  }
+  .opportunities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* !!HowTO _>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+  .membership-how-container {
+    background-color: var(--darkbrown);
+  }
+  .membership-how-container .section-title {
+    padding: 0;
+    color: #fff;
+  }
+  .for-donated-container .section-title {
+    color: var(--textcolor);
+    padding: 0;
+  }
+  .how-card,
+  .for-donated-card {
+    border: 1px solid #ccc;
+    padding: 1.25rem;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    padding: 2.5rem 2rem;
+    gap: 2rem;
+    flex: 1;
+  }
+  .col-1 {
+    flex-basis: 40%;
+    padding: 4rem 5rem;
+  }
+  .col-2 {
+    background-image: url("../svg/wave.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    padding: 4rem;
+  }
+  .how-cards,
+  .for-donated-cards {
+    gap: 2rem;
+    align-items: stretch;
+  }
+  .how-cards p,
+  .for-donated-cards p {
+    font-family: var(--notosansjp);
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--textcolor);
+    order: 1;
+  }
+  .how-cards h2,
+  .for-donated-cards h2 {
+    font-family: var(--bevietampro);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--lightbrown);
+    order: 2;
+    margin-top: auto;
   }
 }

@@ -60,3 +60,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// donation switch tabs
+
+document.addEventListener("DOMContentLoaded", function () {
+  const hashLinks = document.querySelectorAll(".hash-donation");
+  const tabs = document.querySelectorAll(".tab");
+
+  window.showTab = function (e, targetHash) {
+    e.preventDefault();
+
+    tabs.forEach((tab) => {
+      tab.classList.add("d-none");
+    });
+
+    const targetTab = document.getElementById(targetHash);
+    if (targetTab) {
+      targetTab.classList.remove("d-none");
+    }
+
+    hashLinks.forEach((link) => {
+      link.classList.remove("active");
+      link.style.backgroundColor = "";
+      link.style.color = "";
+    });
+
+    e.currentTarget.classList.add("active");
+    e.currentTarget.style.backgroundColor = "var(--lightbrown)";
+    e.currentTarget.style.color = "#fff";
+  };
+
+  if (hashLinks.length > 0) {
+    hashLinks[0].classList.add("active");
+    hashLinks[0].style.backgroundColor = "var(--lightbrown)";
+    hashLinks[0].style.color = "#fff";
+    tabs[0].classList.remove("d-none");
+  }
+});

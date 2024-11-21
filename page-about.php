@@ -262,7 +262,7 @@
               <p>
                 Semper neque blandit auctor adipiscing. Montes dolor fringilla faucibus tristique vestibulum viverra lobortis integer et. Sodales odio mi pharetra odio a amet tristique. Lorem donec sodales dignissim adipiscing quam ante. Ridiculus pretium placerat vel purus lacinia semper.
               </p>
-              <button type="button" class="long-button full-width c-white bg-lbrown">
+              <button type="button" class="button button--long full-width c-white bg-lbrown">
                 <p class="ai-c flx jc-sb"> 詳しく見る
                   <span> <?= SVG_play ?>
                 </p>

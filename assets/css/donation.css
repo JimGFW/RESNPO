@@ -1,0 +1,115 @@
+#donationPage {
+  .donation-landing-container,
+  .donation-method-container {
+    padding: 1.25rem 5rem;
+  }
+
+  .donation-landing-container iframe {
+    min-height: 80vh;
+    width: 100%;
+    border-radius: 12px;
+  }
+  .donation-image-banner {
+    height: 25rem;
+  }
+  .donation-image-banner img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  /* !!Donation Method _>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+  .section-title {
+    padding-left: 0;
+  }
+
+  .payment-networks {
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .payment-networks img {
+    width: 100%;
+    width: 5.9375rem;
+    max-height: 3.75rem;
+  }
+  .method-col-container {
+    gap: 2rem;
+    align-items: stretch; /* Ensure columns stretch to the same height */
+  }
+  .method-col-1 {
+    flex-basis: 30%;
+    gap: 0.75rem;
+  }
+  .method-col-2 {
+    border-radius: 12px;
+    padding: 2.5rem;
+    background-color: #fff;
+    flex-basis: 70%;
+  }
+  .method-col-2 h4 {
+    font-family: var(--notosansjp);
+    font-size: 1.25rem;
+  }
+  .method-col-2 h5 {
+    font-family: var(--notosansjp);
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .method-button {
+    background-color: #fbe9e5;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-top: 0;
+  }
+
+  .gray-bg {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: #d1d1d1;
+    margin-block: 1.5rem;
+  }
+  .amount-wrapper {
+    margin: 1rem 0 2rem 0;
+  }
+  .amount-row-1,
+  .amount-row-2 {
+    gap: 0.5rem;
+  }
+  .amount-row-1 .button {
+    font-family: var(--notosansjp);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 56px;
+  }
+  .amount-button button {
+    border-radius: 12px;
+    width: 100%;
+    background-color: #81bf24;
+    color: #fff;
+    margin-top: 0.5rem;
+  }
+  .footer-inquiry {
+    background-color: #e7e7e7;
+    padding: 0.75rem;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+  }
+  .footer-inquiry p {
+    flex-basis: 60%;
+  }
+  .inquiry-button {
+    width: 40%;
+  }
+
+  .footer-inquiry .button {
+    flex-basis: 40%;
+    margin-top: 0;
+    flex-grow: 1;
+  }
+  .hash-donation.active {
+    background-color: var(--lightbrown);
+    color: #fff;
+  }
+}

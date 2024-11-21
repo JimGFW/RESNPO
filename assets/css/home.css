@@ -165,7 +165,7 @@
   }
 
   .event-date {
-    border: 2px solid #0d0d0d;
+    border: 2px solid var(--textcolor);
     display: inline-block;
     border-radius: 500px;
     padding: 0.25rem 0.5rem;

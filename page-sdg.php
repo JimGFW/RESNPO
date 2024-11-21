@@ -15,6 +15,9 @@
       </div>
     </div>
   </section>
-</section>
+
+  sdg#
+
+</section> <!-- sdgPage -->
 
 <?php get_footer() ?>

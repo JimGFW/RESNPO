@@ -3,7 +3,7 @@
   <div class="footer-container" data-aos="fade-up">
     <div class="global-width">
       <div class="top-button">
-        <button id="scrollToTopButton" type="button" class="x-short-button c-black bg-white" onclick="scrollToTop()">
+        <button id="scrollToTopButton" type="button" class="button button--x-short c-black bg-white" onclick="scrollToTop()">
           <p class="ai-c flx jc-sb">
             <span> <?= SVG_play_brown ?> </span>
             TOP
@@ -46,7 +46,7 @@
           <div class="col-4-title"><?php section_title('Supporter') ?></div>
           <p>子どもたちに一つでも多くの機会を届けるため 皆様の寄付を私たちの活動に利用させていただきます。</p>
           <a href="<?= site_url() . '/donation' ?>">
-            <button type="button" class="long-button c-white bg-lbrown">
+            <button type="button" class="button button--long c-white bg-lbrown">
               <p class="ai-c flx jc-sb"> 詳しく見る
                 <span> <?= SVG_play ?>
               </p>

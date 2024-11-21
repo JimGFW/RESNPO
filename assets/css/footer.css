@@ -74,7 +74,7 @@
   gap: 0.5rem;
 }
 
-footer .x-short-button p {
+footer .button p {
   gap: 1rem;
 }
 
@@ -87,6 +87,6 @@ footer .section-title {
   /* font-size: 24px; */
 }
 
-footer .long-button {
+footer .button {
   margin-top: 4.375rem;
 }

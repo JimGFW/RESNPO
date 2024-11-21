@@ -25,7 +25,7 @@
                   未来の可能性を芸術で表現できる社会を目指して</h1>
                 <div>
                   <a href="<?= site_url() . '/about' ?>">
-                    <button type="button" class="x-short-button c-black bg-white">
+                    <button type="button" class="button button--x-short c-black bg-white">
                       <p class="ai-c flx jc-sb">詳しく見る
                         <span> <?= SVG_redirect ?>
                       </p>
@@ -45,7 +45,7 @@
                 <h1>「SDGs甲子園」の過去実績 をご 紹介します。</h1>
                 <div>
                   <a href="<?= site_url() . '/projects' ?>">
-                    <button type="button" class="x-short-button c-black bg-white">
+                    <button type="button" class="button button--x-short c-black bg-white">
                       <p class="ai-c flx jc-sb">詳しく見る
                         <span> <?= SVG_redirect ?>
                       </p>
@@ -273,7 +273,7 @@
               <div class="adviser-description">
                 <h3>MARIA JADE CATALAN-OPULENCIA, PhD </h3>
                 <p class="span-subtitle">特別顧問</p>
-                <button type="button" class="long-button c-white bg-lbrown">
+                <button type="button" class="button button--long c-white bg-lbrown">
                   <p class="ai-c flx jc-sb">プロフィールを見る
                     <span> <?= SVG_play ?>
                   </p>
