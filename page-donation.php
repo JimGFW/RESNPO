@@ -191,43 +191,43 @@
           <!-- TAB 3 - Item Donation -->
           <div class="method-col-2 tab d-none" id="C">
             <h3>以下のようなモノを寄付として受け付けております。</h3>
-            <div class="item-list">
-              <div class="item-card">
+            <div class="item-list flx">
+              <div class="item-card flx-col">
                 <img src="<?= RESNPO_IMAGE . '/donation/notebook.png' ?>" alt="notebook">
                 <div class="item-description flx-col">
                   <h4>文具</h4>
                   <p>鉛筆、ペン、ボールペン、クレヨン、クレパス、消しゴム、ノート、定規、コンパス、ホチキス</p>
                 </div>
               </div>
-              <div class="item-card">
+              <div class="item-card flx-col">
                 <img src="<?= RESNPO_IMAGE . '/donation/book.png' ?>" alt="book">
                 <div class="item-description flx-col">
                   <h4>絵本</h4>
                   <p>日本語の絵本、英語の絵本 </p>
                 </div>
               </div>
-              <div class="item-card">
+              <div class="item-card flx-col">
                 <img src="<?= RESNPO_IMAGE . '/donation/plates.png' ?>" alt="plates">
                 <div class="item-description flx-col">
                   <h4>不用品</h4>
                   <p>食器、電化製品、調理器具、アクセサリー、靴、スポーツ用品、バッグ、インテリア雑貨、工具、楽器</p>
                 </div>
               </div>
-              <div class="item-card">
+              <div class="item-card flx-col">
                 <img src="<?= RESNPO_IMAGE . '/donation/wheelchairs.png' ?>" alt="wheelchair">
                 <div class="item-description flx-col">
                   <h4>医療品</h4>
                   <p>ばんそうこう、包帯、ガーゼ、綿棒、マスク、救急箱、血圧計、車椅子</p>
                 </div>
               </div>
-              <div class="item-card">
+              <div class="item-card flx-col">
                 <img src="<?= RESNPO_IMAGE . '/donation/stuffed-toy.png' ?>" alt="stuffed-toy">
                 <div class="item-description flx-col">
                   <h4>ぬいぐるみおもちゃ</h4>
                   <p>ディズニーなどのアニメキャラクター、テディベアなどの動物類、トミカ、プラレール </p>
                 </div>
               </div>
-              <div class="item-card">
+              <div class="item-card flx-col">
                 <img src="<?= RESNPO_IMAGE . '/donation/necklace.png' ?>" alt="necklace">
                 <div class="item-description flx-col">
                   <h4>銀・プラチナ・金</h4>
@@ -235,7 +235,7 @@
                     ※片方だけでもOK</p>
                 </div>
               </div>
-              <div class="item-card">
+              <div class="item-card flx-col">
                 <img src="<?= RESNPO_IMAGE . '/donation/others.png' ?>" alt="others">
                 <div class="item-description flx-col">
                   <h4>不用品</h4>
