@@ -38,7 +38,7 @@
     align-items: stretch; /* Ensure columns stretch to the same height */
   }
   .method-col-1 {
-    flex-basis: 30%;
+    flex-basis: 20%;
     gap: 0.75rem;
   }
   .method-col-2 {
@@ -47,7 +47,7 @@
     background-color: #fff;
     flex-basis: 70%;
   }
-  .method-col-2 h4 {
+  .method-col-2 h3 {
     font-family: var(--notosansjp);
     font-size: 1.25rem;
   }
@@ -111,5 +111,55 @@
   .hash-donation.active {
     background-color: var(--lightbrown);
     color: #fff;
+  }
+
+  /* tab3 */
+  #C {
+    font-family: var(--notosansjp);
+  }
+  .item-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .item-card {
+    padding: 0.75rem;
+    border-radius: 12px;
+    background-color: #e7e7e7;
+  }
+
+  .item-card img {
+    height: 7.5rem;
+    min-width: 10rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  .item-description {
+    gap: 0.25rem;
+    margin-top: 0.75rem;
+  }
+  .ship-info {
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+  }
+  .ship-dest-title {
+    gap: 0.5rem;
+  }
+  .hr-dotted {
+    border-top: 1px dotted #81bf24;
+  }
+  .example-donations > h4:first-of-type {
+    padding: 1.5rem 0 0 0;
+  }
+  .example-donation-card {
+    flex: 1;
+    gap: 0.5rem;
+  }
+  .example-donation-card img {
+    max-height: 11.25rem;
+    height: 100%;
   }
 }

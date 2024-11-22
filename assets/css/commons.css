@@ -64,6 +64,9 @@ html {
 .c-black {
   color: #000;
 }
+.c-red {
+  color: #f85d62;
+}
 .c-lbrown {
   color: var(--lightbrown);
 }

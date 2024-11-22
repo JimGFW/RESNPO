@@ -222,7 +222,7 @@
           <?php endif; ?>
         </div>
         <div class="see-button">
-          <button type="button" class="short-button bg-lbrown c-white">
+          <button type="button" class="button button--short bg-lbrown c-white">
             <p class="ai-c flx jc-sb">すべてを見る
               <span> <?= SVG_play ?>
             </p>
@@ -250,7 +250,7 @@
             </h1>
             <p>NPO法人 RESは、ひとりでも多くの子どもたちが、 未来の国際社会で活躍できる社会を目指し、 自ら考え行動できる人材を育成する活動をしています。</p>
 
-            <button type="button" class="short-button bg-white c-lbrown" data-aos="fade-right">
+            <button type="button" class="button button--short bg-white c-lbrown" data-aos="fade-right">
               <p class="ai-c flx jc-sb">詳しく見る
                 <span> <?= SVG_play_brown_sm ?>
               </p>
@@ -339,7 +339,7 @@
             <p>活動に賛同し、支持してくださる全ての皆様に厚く御礼申し上げます。</p>
           </div>
           <div class="support-button">
-            <button type="button" class="short-button bg-lbrown c-white">
+            <button type="button" class="button button--short bg-lbrown c-white">
               <p class="ai-c flx jc-sb">すべてを見る
                 <span> <?= SVG_play ?>
               </p>

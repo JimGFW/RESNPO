@@ -41,6 +41,8 @@
     line-height: 23.17px;
     padding-left: 3rem;
   }
+
+  /* form */
   .contact-form {
     background-color: #fff;
     border-radius: 10px;
@@ -52,7 +54,8 @@
     width: 60%;
     z-index: 1;
   }
-  .form-group {
+  .form-group,
+  .wpforms-field {
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -66,23 +69,37 @@
     font-family: Arial, sans-serif;
   }
 
-  .edu-contact-form label {
-    flex: 1;
+  .edu-contact-form label,
+  .wpforms-field-label {
+    /* flex: 1; */
     font-family: var(--notosansjp);
     font-size: 0.875rem;
     font-weight: 500;
+    flex-basis: 25%;
   }
 
   .edu-contact-form input,
-  .edu-contact-form textarea {
-    flex: 4;
+  .edu-contact-form textarea,
+  .wpforms-field-medium {
+    /* flex: 4; */
     width: 100%;
     padding: 15px;
-    border: 1px solid #e7e7e7;
+    border: 1px solid #e7e7e7 !important;
     box-sizing: border-box;
     font-size: 15px;
-    background-color: #f6f6f6;
+    background-color: #f6f6f6 !important;
     border-radius: 5px;
+    flex-basis: 75%;
+    max-width: 100% !important;
+  }
+
+  .wpforms-container .wpforms-field,
+  .wp-core-ui div.wpforms-container .wpforms-field {
+    padding: 0;
+    position: relative;
+  }
+  .wpforms-field-textarea {
+    align-items: unset;
   }
 
   .edu-contact-form textarea {
@@ -98,8 +115,22 @@
     align-items: baseline;
   }
 
-  .submit-form {
+  .wpforms-submit-container {
     display: flex;
-    justify-content: right;
+    justify-content: end;
+  }
+  .wpforms-submit {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    border-radius: 500px !important;
+    min-width: 12.3125rem;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem 0.5rem 1rem !important;
+    background-color: var(--lightbrown) !important;
+  }
+  .wpforms-submit svg {
+    background-color: white;
+    border-radius: 100%;
   }
 }

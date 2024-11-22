@@ -50,7 +50,7 @@
 
             </ul>
           </li>
-          <li class="dropdown <?php if (is_page('donation') || is_page('membership') || is_page('whatsnew')) echo 'nav-active' ?>">
+          <li class="dropdown <?php if (is_page('donation') || is_page('membership') || is_singular('whatsnew')) echo 'nav-active' ?>">
             <a class="dropdown-toggle flx ai-c" href="javascript:void(0);">
               <span>Join Us</span>
               <span>
@@ -66,10 +66,7 @@
                 <li>Membership</li>
                 <span><?= SVG_play_brown_xs ?></span>
               </a>
-              <a href="<?= site_url() . '/whatsnew' ?>">
-                <li>What's New</li>
-                <span><?= SVG_play_brown_xs ?></span>
-              </a>
+
             </ul>
           </li>
           <li class="<?php if (is_page('corporate')) echo 'nav-active'; ?>">

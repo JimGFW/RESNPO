@@ -1,0 +1,37 @@
+.newsPage {
+  .news-container {
+    padding: 2.5rem 5rem 3rem 5rem;
+  }
+  .cover-image {
+    width: 100%;
+    height: calc(100vh - 7.25rem);
+  }
+  .cover-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  .news-content {
+    padding: 3.75rem 6.75rem;
+  }
+  .event-date {
+    border: 2px solid var(--textcolor);
+    display: inline-block;
+    border-radius: 500px;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .the-title {
+    font-family: var(--bevietnampro);
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  .the-excerpt {
+    font-family: var(--notosansjp);
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #4f4f4f;
+  }
+}

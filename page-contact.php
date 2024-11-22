@@ -25,39 +25,9 @@
         </div>
       </div>
       <div class="contact-form">
-        <form class="edu-contact-form" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" method="post">
-          <div class="form-group">
-            <label for="company">会社名/組織名</label>
-            <input type="text" id="company" name="company" placeholder="Gグローフォワード JP.株式会社, Ltd.)">
-          </div>
-          <div class="form-group">
-            <label for="name">お名前</label>
-            <input type="text" id="name" name="name" placeholder="例) 山田 太郎" required>
-          </div>
-          <div class="form-group">
-            <label for="email">メールアドレス</label>
-            <input type="email" id="email" name="email" placeholder="例) info@edu-app.com" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">電話番号</label>
-            <input type="tel" id="phone" name="phone" placeholder="例) 000-000-000" required>
-          </div>
-          <div class="form-group">
-            <label for="inquiry">お問い合わせ内容</label>
-            <textarea rows="10" cols="50" id="inquiry" name="inquiry" required></textarea>
-          </div>
-          <div class="submit-form">
-            <button type="button" class="short-button bg-lbrown c-white" data-aos="fade-right">
-              <p class="ai-c flx jc-sb">詳しく見る
-                <span> <?= SVG_send ?>
-              </p>
-              </span>
-            </button>
-          </div>
-        </form>
+        <?php echo do_shortcode('[wpforms id="154" title="false"]') ?>
       </div>
     </div>
-  </div>
 </section>
 
 <?php get_footer(); ?>
