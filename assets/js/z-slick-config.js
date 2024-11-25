@@ -129,7 +129,7 @@ $(".gallery-wrapper").slick({
 
 // activities n cultural exchange
 $(".cards-content-wrapper").slick({
-  slidesToShow: 2.99,
+  slidesToShow: 2.83,
   slidesToScroll: 1,
   speed: 1000,
   infinite: true,
