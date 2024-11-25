@@ -113,3 +113,45 @@ $(document).ready(function () {
 //     selector: ".glightbox",
 //   });
 // });
+
+// photo gallery
+$(".gallery-wrapper").slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  speed: 1000,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  centerMode: true,
+  centerPadding: "25%", // or 350px;
+  infinite: true,
+  // arrows: true,
+});
+
+// activities n cultural exchange
+$(".cards-content-wrapper").slick({
+  slidesToShow: 2.99,
+  slidesToScroll: 1,
+  speed: 1000,
+  infinite: true,
+  variableWidth: false,
+  centerMode: false,
+});
+$(".prev-btn").click(function () {
+  $(".cards-content-wrapper").slick("slickPrev");
+});
+$(".next-btn").click(function () {
+  $(".cards-content-wrapper").slick("slickNext");
+});
+$(".prev-btn").addClass("slick-disabled");
+$(".cards-content-wrapper").on("afterChange", function () {
+  if ($(".slick-prev").hasClass("slick-disabled")) {
+    $(".prev-btn").addClass("slick-disabled");
+  } else {
+    $(".prev-btn").removeClass("slick-disabled");
+  }
+  if ($(".slick-next").hasClass("slick-disabled")) {
+    $(".next-btn").addClass("slick-disabled");
+  } else {
+    $(".next-btn").removeClass("slick-disabled");
+  }
+});

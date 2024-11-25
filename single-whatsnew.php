@@ -11,7 +11,7 @@
             <p class="the-date"><?= esc_html(get_the_date()) ?></p>
           </div>
           <h1 class="the-title"><?= esc_html(get_the_title()) ?></h1>
-          <p class="the-excerpt"><?= esc_html(get_the_excerpt()) ?></p>
+          <p class="the-excerpt"><?= esc_html(the_excerpt()) ?></p>
         </div>
       </div>
     </div>

@@ -10,6 +10,7 @@
     </div>
   </section>
 
+  <!-- donation/membership -->
   <section id="dm-section-2">
     <div class="dm-section-2-container">
       <div class="global-width">
