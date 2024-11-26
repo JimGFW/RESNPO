@@ -107,4 +107,88 @@
   .cards-content-wrapper .slick-slide {
     display: inline-block; /* Ensure slides are displayed inline */
   }
+
+  /* !!Upcoming Events _>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+  .ue-container {
+    padding: 0 5rem 5rem 5rem;
+  }
+  .ue-container .section-title {
+    padding: 6rem 0 1.5rem 0;
+  }
+
+  /* !!Criteria _>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+  .criteria-container {
+    padding: 0 0 0 5rem;
+  }
+  .flx-title h1 {
+    font-family: var(--bevietnampro);
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 55.66px;
+  }
+  .flx-title {
+    padding: 7.5rem 0;
+    flex-basis: 25%;
+    display: flex;
+  }
+
+  .criteria-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5rem 0 0 5rem;
+    background-image: url("../image/sdg/wavy-vector-long.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 32.375rem;
+  }
+  .criteria-container .slick-slider {
+    width: 75% !important;
+  }
+
+  .criteria-card {
+    display: flex;
+    align-items: center;
+    max-width: 20.375rem;
+    height: 15.8125rem;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    margin-inline: 0.625rem;
+    padding: 2.5rem;
+  }
+  .criteria-card h2 {
+    font-family: var(--notosansjp);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 34.75px;
+    color: var(--lightbrown);
+    margin-bottom: 2rem;
+  }
+  .criteria-card p {
+    font-family: var(--notosansjp);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 23.17px;
+    color: var(--textcolor);
+  }
+
+  /* !!Past Achievement */
+  .achievement-card {
+    background-color: aqua;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 28.75rem;
+  }
+  .achievement-image {
+    height: 15.625rem;
+  }
+
+  .achievement-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.75rem;
+  }
 }

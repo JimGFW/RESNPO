@@ -8,3 +8,4 @@ require_once(custom_dir . "/front/postType-upcomingEvents.php");
 require_once(custom_dir . "/front/postType-whatsNew.php");
 require_once(custom_dir . "/front/postType-activities.php");
 require_once(custom_dir . "/front/postType-activitiesExchanges.php");
+require_once(custom_dir . "/front/postType-pastAchievements.php");

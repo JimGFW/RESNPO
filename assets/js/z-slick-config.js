@@ -155,3 +155,24 @@ $(".cards-content-wrapper").on("afterChange", function () {
     $(".next-btn").removeClass("slick-disabled");
   }
 });
+
+$(".criteria-card-wrapper").slick({
+  slidesToShow: 2.9,
+  slidesToScroll: 1,
+  speed: 1000,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  arrows: false,
+  infinite: true,
+});
+
+// for past achievements IMAGE slider
+jQuery(document).ready(function ($) {
+  $(".achievement-card .pa-images-wrapper").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: true,
+    adaptiveHeight: true,
+  });
+});

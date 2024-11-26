@@ -435,3 +435,72 @@ a {
     font-weight: 400;
   }
 }
+
+/* !!Whats New/Upcoming Events _>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+#sdgPage,
+#homepage {
+  .news-thumbnail,
+  .ue-thumbnail {
+    width: 17.625rem;
+    flex-shrink: 0;
+    height: 10.625rem;
+  }
+
+  .news-thumbnail img,
+  .ue-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.75rem;
+  }
+
+  .news-content,
+  .ue-content {
+    padding: 1.25rem;
+  }
+
+  .new-tag,
+  .ue-tag {
+    display: inline-block;
+    background-color: var(--darkbrown);
+    color: #ffffff;
+    padding: 0.2em 0.5em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    border-radius: 100px;
+  }
+
+  .news-list,
+  .ue-list {
+    gap: 1.25rem;
+  }
+  .ue-redirect,
+  .news-redirect {
+    padding: 0 2rem;
+  }
+
+  .ue-card,
+  .news-card {
+    background-color: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .news-card .the-excerpt .ue-card .the-excerpt {
+    font-size: 0.75em;
+    font-family: var(--notosansjp);
+  }
+  .whatsnew-date {
+    margin-bottom: 0.75rem;
+  }
+  .see-button {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  .event-date {
+    border: 2px solid var(--textcolor);
+    display: inline-block;
+    border-radius: 500px;
+    padding: 0.25rem 0.5rem;
+  }
+}

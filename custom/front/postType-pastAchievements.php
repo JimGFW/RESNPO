@@ -1,6 +1,6 @@
 <?php
 
-class PastPerformancePostType
+class PastAchievementsPostType
 {
   public function __construct()
   {
@@ -12,23 +12,23 @@ class PastPerformancePostType
   public function register_post_type()
   {
     $labels = [
-      'name' => _x('Past Performances', 'Post Type General Name', 'textdomain'),
-      'singular_name' => _x('Past Performance', 'Post Type Singular Name', 'textdomain'),
-      'menu_name' => __('Past Performances', 'textdomain'),
-      'name_admin_bar' => __('Past Performance', 'textdomain'),
+      'name' => _x('Past Achievements', 'Post Type General Name', 'textdomain'),
+      'singular_name' => _x('Past Achievements', 'Post Type Singular Name', 'textdomain'),
+      'menu_name' => __('Past Achievements', 'textdomain'),
+      'name_admin_bar' => __('Past achievements', 'textdomain'),
     ];
 
     $args = [
-      'label' => __('Past Performance', 'textdomain'),
+      'label' => __('Past Achievements', 'textdomain'),
       'labels' => $labels,
-      'supports' => ['title', 'editor', 'thumbnail'],
+      'supports' => ['title', 'thumbnail'],
       'public' => true,
       'has_archive' => true,
-      'show_in_rest' => true,
+      // 'show_in_rest' => true,
       'menu_icon' => 'dashicons-star-filled',
     ];
 
-    register_post_type('pastperformance', $args);
+    register_post_type('pastachievements', $args);
   }
 
   public function add_meta_boxes()
@@ -37,7 +37,7 @@ class PastPerformancePostType
       'category',
       'Category',
       [$this, 'category_meta_box_callback'],
-      'pastperformance',
+      'pastachievements',
       'normal',
       'high'
     );
@@ -46,7 +46,7 @@ class PastPerformancePostType
       'dateNtime',
       'Date and Time',
       [$this, 'dateNtime_meta_box_callback'],
-      'pastperformance',
+      'pastachievements',
       'normal',
       'high'
     );
@@ -55,7 +55,7 @@ class PastPerformancePostType
       'location',
       'Location',
       [$this, 'location_meta_box_callback'],
-      'pastperformance',
+      'pastachievements',
       'normal',
       'high'
     );
@@ -64,7 +64,7 @@ class PastPerformancePostType
       'main_content',
       'Main Content',
       [$this, 'content_meta_box_callback'],
-      'pastperformance',
+      'pastachievements',
       'normal',
       'high'
     );
@@ -73,7 +73,7 @@ class PastPerformancePostType
       'description',
       'Description',
       [$this, 'description_meta_box_callback'],
-      'pastperformance',
+      'pastachievements',
       'normal',
       'high'
     );
@@ -82,7 +82,7 @@ class PastPerformancePostType
       'activity',
       'Activity',
       [$this, 'activity_meta_box_callback'],
-      'pastperformance',
+      'pastachievements',
       'normal',
       'high'
     );
@@ -91,7 +91,7 @@ class PastPerformancePostType
       'images',
       'Images',
       [$this, 'images_meta_box_callback'],
-      'pastperformance',
+      'pastachievements',
       'normal',
       'high'
     );
@@ -278,4 +278,4 @@ class PastPerformancePostType
   }
 }
 
-new PastPerformancePostType();
+new PastAchievementsPostType();
