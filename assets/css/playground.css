@@ -1,0 +1,69 @@
+.achievement-lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.lightbox-content {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.close-lightbox {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.lightbox-images {
+  margin-bottom: 20px;
+}
+
+.lightbox-images .slick-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.lightbox-details {
+  padding: 20px 0;
+}
+
+.lightbox-images .slick-prev,
+.lightbox-images .slick-next {
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+}
+
+.lightbox-images .slick-prev {
+  left: 10px;
+}
+
+.lightbox-images .slick-next {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .lightbox-content {
+    width: 95%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+}

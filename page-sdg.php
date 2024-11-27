@@ -138,12 +138,12 @@
               'content' => '人とのつながり、周りを巻き込む力を評価 <br> <br> 地域、社会と交流し、人とより広く、または、深くつながることができているか。'
             ],
             [
-              'title' => 'つながり力',
-              'content' => '人とのつながり、周りを巻き込む力を評価 <br> <br> 地域、社会と交流し、人とより広く、または、深くつながることができているか。'
+              'title' => '持続可能力',
+              'content' => '継続することで、目標達成に繋がるかを評価 <br> <br> 一過性のものではなく、SDGsのゴール達成に結び付くものになっているか。'
             ],
             [
-              'title' => 'つながり力',
-              'content' => '人とのつながり、周りを巻き込む力を評価 <br> <br> 地域、社会と交流し、人とより広く、または、深くつながることができているか。'
+              'title' => '活動力',
+              'content' => '課題解決のため、実際に行動ができたかを評価 <br> <br> アイデアだけでなく、課題解決のため、実際にアクションを起こせたかどうか'
             ]
           ];
           ?>
@@ -201,8 +201,7 @@
     <div class="past-achievements-container">
       <div class="global-width">
         <div class="flx top">
-          <?php section_title('「 SDGs甲子園 」 の過去実績をご紹介します。') ?>
-          <!-- slick button -->
+          <?php section_title('「 SDGs甲子園 」 の過去実績をご紹介します。') ?>
         </div>
         <div class="achievements-slider">
           <?php
@@ -216,12 +215,18 @@
           if ($achievements->have_posts()):
             while ($achievements->have_posts()):
               $achievements->the_post();
+
+              // Fetch all meta data
+              $images = get_post_meta(get_the_ID(), 'images', true) ?: [];
+              $category = get_post_meta(get_the_ID(), 'category', true);
+              $dateNtime = get_post_meta(get_the_ID(), 'dateNtime', true);
+              $location = get_post_meta(get_the_ID(), 'location', true);
+              $description = get_post_meta(get_the_ID(), 'description', true) ?: get_the_excerpt();
           ?>
-              <div class="achievement-card">
+              <div class="achievement-card" data-achievement-id="<?php echo get_the_ID(); ?>">
                 <?php
-                $images = get_post_meta(get_the_ID(), 'images', true) ?: [];
                 if (!empty($images)) {
-                  echo '<div class="pa-images-wrapper ">';
+                  echo '<div class="pa-images-wrapper">';
                   foreach ($images as $image) {
                     echo '<div class="achievement-image">';
                     echo    '<img src="' . esc_url($image) . '" alt="Image" class="pa-carousels">';
@@ -232,32 +237,26 @@
                   echo '<p>No images found.</p>';
                 }
                 ?>
-                <div class="flx-row">
-                  <h5>カテゴリ</h5>
-                  <h6>
-                    <?php
-                    $category = get_post_meta(get_the_ID(), 'category', true);
-                    echo !empty($category) ? esc_html($category) : 'No category found.';
-                    ?>
-                  </h6>
-                </div>
-                <div class="flx-row">
-                  <h5>開催日時</h5>
-                  <h6>
-                    <?php
-                    $dateNtime = get_post_meta(get_the_ID(), 'dateNtime', true);
-                    echo !empty($dateNtime) ? esc_html($dateNtime) : 'No date and time found.';
-                    ?>
-                  </h6>
-                </div>
-                <div class="flx-row">
-                  <h5>開催場所</h5>
-                  <h6>
-                    <?php
-                    $location = get_post_meta(get_the_ID(), 'location', true);
-                    echo !empty($location) ? esc_html($location) : 'No location found.';
-                    ?>
-                  </h6>
+                <div class="achievement-content-wrapper flx jc-sb">
+                  <div class="achievement-descriptions">
+                    <div class="flx-row achievement-description">
+                      <h5>カテゴリ</h5>
+                      <h6><?php echo !empty($category) ? esc_html($category) : 'No category found.'; ?></h6>
+                    </div>
+                    <div class="flx-row achievement-description">
+                      <h5>開催日時</h5>
+                      <h6><?php echo !empty($dateNtime) ? esc_html($dateNtime) : 'No date and time found.'; ?></h6>
+                    </div>
+                    <div class="flx-row achievement-description">
+                      <h5>開催場所</h5>
+                      <h6><?php echo !empty($location) ? truncate_text(esc_html($location), 20) : 'No location found.'; ?></h6>
+                    </div>
+                  </div>
+                  <div class="achievement-button flx jc-fe">
+                    <button class="button-style-reset brown-play" type="button">
+                      <span><?= SVG_play_brown ?></span>
+                    </button>
+                  </div>
                 </div>
               </div>
           <?php
@@ -305,4 +304,33 @@
 
 </section> <!-- sdgPage -->
 
+
+
+
+<div id="achievement-lightbox" class="achievement-lightbox">
+  <div class="lightbox-content">
+    <button class="close-lightbox">&times;</button>
+    <div class="lightbox-images"></div>
+    <div class="lightbox-details">
+      <div class="achievement-descriptions">
+        <div class="flx-row achievement-description">
+          <h5>カテゴリ</h5>
+          <h6 class="lightbox-category"></h6>
+        </div>
+        <div class="flx-row achievement-description">
+          <h5>開催日時</h5>
+          <h6 class="lightbox-datetime"></h6>
+        </div>
+        <div class="flx-row achievement-description">
+          <h5>開催場所</h5>
+          <h6 class="lightbox-location"></h6>
+        </div>
+        <div class="flx-row achievement-description">
+          <h5>詳細</h5>
+          <div class="lightbox-description"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <?php get_footer() ?>

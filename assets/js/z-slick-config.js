@@ -1,16 +1,4 @@
-// jQuery(document).ready(function ($) {
-//   $(".bg-container").slick({
-//     dots: true,
-//     infinite: true,
-//     speed: 1000,
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     autoplaySpeed: 2500,
-//   });
-// });
-
-jQuery(document).ready(function ($) {
+$(document).ready(function ($) {
   $(".events-slider").slick({
     dots: false,
     infinite: true,
@@ -20,7 +8,7 @@ jQuery(document).ready(function ($) {
   });
 });
 
-jQuery(document).ready(function ($) {
+$(document).ready(function ($) {
   $(".slider-wrapper").slick({
     slidesToShow: 1.2,
     slidesToScroll: 1,
@@ -167,11 +155,22 @@ $(".criteria-card-wrapper").slick({
 });
 
 // for past achievements IMAGE slider
-jQuery(document).ready(function ($) {
+$(document).ready(function ($) {
   $(".achievement-card .pa-images-wrapper").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
+    dots: false, //temporarily disabled
+    adaptiveHeight: true,
+  });
+});
+
+// for past achievements CARD slider
+$(document).ready(function ($) {
+  $(".achievements-slider").slick({
+    slidesToShow: 2.8,
+    slidesToScroll: 1,
+    arrows: false,
     dots: true,
     adaptiveHeight: true,
   });

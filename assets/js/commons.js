@@ -11,6 +11,8 @@ function scrollToTop() {
     behavior: "smooth",
   });
 }
+
+//dropdown header
 document.addEventListener("DOMContentLoaded", function () {
   const dropdownToggles = document.querySelectorAll("#header .dropdown-toggle");
   const dropdownContents = document.querySelectorAll(
@@ -62,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // donation switch tabs
-
 document.addEventListener("DOMContentLoaded", function () {
   const hashLinks = document.querySelectorAll(".hash-donation");
   const tabs = document.querySelectorAll(".tab");
@@ -110,5 +111,86 @@ document.addEventListener("DOMContentLoaded", function () {
 
   sendIconElements.forEach(function (element) {
     element.innerHTML = element.innerHTML + svgIcon;
+  });
+});
+
+$(document).ready(function ($) {
+  // Initialize achievement cards click event
+  $(".achievement-card").on("click", function () {
+    const achievementId = $(this).data("achievement-id");
+    openLightbox($(this));
+  });
+
+  // Close lightbox when clicking the close button or outside the content
+  $(".close-lightbox, .achievement-lightbox").on("click", function (e) {
+    if (e.target === this) {
+      closeLightbox();
+    }
+  });
+
+  function openLightbox($card) {
+    // Get content from the clicked card
+    const $imagesWrapper = $card.find(".pa-images-wrapper").clone();
+    const $images = $imagesWrapper.find(".achievement-image").clone();
+    const category = $card.find(".achievement-descriptions h6").eq(0).text();
+    const datetime = $card.find(".achievement-descriptions h6").eq(1).text();
+    const location = $card.find(".achievement-descriptions h6").eq(2).text();
+
+    // Clear previous content
+    $(".lightbox-images").empty();
+
+    // Create a new wrapper for the images
+    const $newWrapper = $('<div class="pa-images-wrapper"></div>');
+    $newWrapper.append($images);
+    $(".lightbox-images").append($newWrapper);
+
+    // Update other lightbox content
+    $(".lightbox-category").text(category);
+    $(".lightbox-datetime").text(datetime);
+    $(".lightbox-location").text(location);
+
+    // Show lightbox first
+    $(".achievement-lightbox").fadeIn(300, function () {
+      // Initialize Slick slider after lightbox is visible
+      if (
+        !$(".lightbox-images .pa-images-wrapper").hasClass("slick-initialized")
+      ) {
+        $(".lightbox-images .pa-images-wrapper").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: true,
+          adaptiveHeight: true,
+          prevArrow:
+            '<button type="button" class="slick-prev">Previous</button>',
+          nextArrow: '<button type="button" class="slick-next">Next</button>',
+        });
+      }
+    });
+
+    // Prevent body scrolling when lightbox is open
+    $("body").css("overflow", "hidden");
+  }
+
+  function closeLightbox() {
+    // Destroy Slick slider in lightbox
+    if (
+      $(".lightbox-images .pa-images-wrapper").hasClass("slick-initialized")
+    ) {
+      $(".lightbox-images .pa-images-wrapper").slick("unslick");
+    }
+
+    // Hide lightbox with fade effect
+    $(".achievement-lightbox").fadeOut(300);
+
+    // Restore body scrolling
+    $("body").css("overflow", "");
+  }
+
+  // Handle keyboard events
+  $(document).keydown(function (e) {
+    if (e.key === "Escape") {
+      closeLightbox();
+    }
   });
 });
