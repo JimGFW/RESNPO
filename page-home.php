@@ -85,7 +85,9 @@
             $delay += 100;
           ?>
             <div class="event-card" data-aos="fade-left" data-aos-delay="<?= $delay ?>">
-              <a href="<?= esc_url(get_the_post_thumbnail_url()) ?>" class="glightbox" data-title="<?= esc_html(get_the_title()) ?>" data-description="<?= esc_html(get_the_excerpt()) ?>">
+              <a href="#"
+                class="event-link"
+                onclick="openModalUE('<?= esc_url(get_the_post_thumbnail_url()) ?>', '<?= esc_attr(get_the_title()) ?>', '<?= esc_attr(get_the_excerpt()) ?>'); return false;">
                 <div class="event-image">
                   <img src="<?= esc_url(get_the_post_thumbnail_url()) ?>" alt="event">
                 </div>
@@ -104,8 +106,7 @@
                       <p><?= esc_html(get_the_excerpt()) ?></p>
                     </div>
                     <button class="button-style-reset brown-play" type="button">
-                      <span> <?= SVG_play_brown ?>
-                      </span>
+                      <span><?= SVG_play_brown ?></span>
                     </button>
                   </div>
                 </div>
@@ -117,6 +118,19 @@
       </div>
     </div>
   </section>
+
+  <!-- Add this modal HTML outside your loop, before closing body -->
+  <div id="customLightbox" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+
+      <img id="modalImage" src="" alt="">
+      <div class="modal-caption">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription"></p>
+      </div>
+    </div>
+  </div>
 
 
   <section id="activities">
@@ -133,7 +147,7 @@
         </div>
       </div>
       <div class="activities-slider" data-aos="fade-right">
-        <div class="slider-wrapper">
+        <div class="activities-slider-wrapper">
           <?php
           $activities_args = array(
             'post_type' => 'activities',

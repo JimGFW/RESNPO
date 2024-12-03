@@ -1,3 +1,4 @@
+//aos animate
 AOS.init({
   startEvent: "load",
   offset: 50,
@@ -27,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
       content.classList.toggle("show");
     });
 
-    // Optional: Close the dropdown when clicking outside of it
     document.addEventListener("click", function (event) {
       if (!toggle.contains(event.target) && !content.contains(event.target)) {
         content.classList.remove("show");
@@ -35,6 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// change color hover dropdown list
 document.addEventListener("DOMContentLoaded", function () {
   const dropdownContents = document.querySelectorAll(".dropdown-content a");
 
@@ -45,11 +47,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const playIcon = content.querySelector("span");
       if (playIcon) {
         playIcon.innerHTML = `
-<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="10" cy="10" r="10" fill="#ffffff"/> <!-- Brown Circle -->
-  <path d="M9.75828 12.7418L11.9166 10.5834C11.9939 10.5063 12.0552 10.4148 12.097 10.314C12.1388 10.2131 12.1603 10.1051 12.1603 9.99593C12.1603 9.88679 12.1388 9.77872 12.097 9.67791C12.0552 9.5771 11.9939 9.48553 11.9166 9.40843L9.75828 7.2501C9.23328 6.73343 8.33328 7.1001 8.33328 7.84176V12.1501C8.33328 12.9001 9.23328 13.2668 9.75828 12.7418Z" fill="#AA402A"/> <!-- White Triangle -->
-</svg>
-
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="10" cy="10" r="10" fill="#ffffff"/> <!-- Brown Circle -->
+            <path d="M9.75828 12.7418L11.9166 10.5834C11.9939 10.5063 12.0552 10.4148 12.097 10.314C12.1388 10.2131 12.1603 10.1051 12.1603 9.99593C12.1603 9.88679 12.1388 9.77872 12.097 9.67791C12.0552 9.5771 11.9939 9.48553 11.9166 9.40843L9.75828 7.2501C9.23328 6.73343 8.33328 7.1001 8.33328 7.84176V12.1501C8.33328 12.9001 9.23328 13.2668 9.75828 12.7418Z" fill="#AA402A"/> <!-- White Triangle -->
+          </svg>
         `;
       }
     });
@@ -111,86 +112,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   sendIconElements.forEach(function (element) {
     element.innerHTML = element.innerHTML + svgIcon;
-  });
-});
-
-$(document).ready(function ($) {
-  // Initialize achievement cards click event
-  $(".achievement-card").on("click", function () {
-    const achievementId = $(this).data("achievement-id");
-    openLightbox($(this));
-  });
-
-  // Close lightbox when clicking the close button or outside the content
-  $(".close-lightbox, .achievement-lightbox").on("click", function (e) {
-    if (e.target === this) {
-      closeLightbox();
-    }
-  });
-
-  function openLightbox($card) {
-    // Get content from the clicked card
-    const $imagesWrapper = $card.find(".pa-images-wrapper").clone();
-    const $images = $imagesWrapper.find(".achievement-image").clone();
-    const category = $card.find(".achievement-descriptions h6").eq(0).text();
-    const datetime = $card.find(".achievement-descriptions h6").eq(1).text();
-    const location = $card.find(".achievement-descriptions h6").eq(2).text();
-
-    // Clear previous content
-    $(".lightbox-images").empty();
-
-    // Create a new wrapper for the images
-    const $newWrapper = $('<div class="pa-images-wrapper"></div>');
-    $newWrapper.append($images);
-    $(".lightbox-images").append($newWrapper);
-
-    // Update other lightbox content
-    $(".lightbox-category").text(category);
-    $(".lightbox-datetime").text(datetime);
-    $(".lightbox-location").text(location);
-
-    // Show lightbox first
-    $(".achievement-lightbox").fadeIn(300, function () {
-      // Initialize Slick slider after lightbox is visible
-      if (
-        !$(".lightbox-images .pa-images-wrapper").hasClass("slick-initialized")
-      ) {
-        $(".lightbox-images .pa-images-wrapper").slick({
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: true,
-          dots: true,
-          adaptiveHeight: true,
-          prevArrow:
-            '<button type="button" class="slick-prev">Previous</button>',
-          nextArrow: '<button type="button" class="slick-next">Next</button>',
-        });
-      }
-    });
-
-    // Prevent body scrolling when lightbox is open
-    $("body").css("overflow", "hidden");
-  }
-
-  function closeLightbox() {
-    // Destroy Slick slider in lightbox
-    if (
-      $(".lightbox-images .pa-images-wrapper").hasClass("slick-initialized")
-    ) {
-      $(".lightbox-images .pa-images-wrapper").slick("unslick");
-    }
-
-    // Hide lightbox with fade effect
-    $(".achievement-lightbox").fadeOut(300);
-
-    // Restore body scrolling
-    $("body").css("overflow", "");
-  }
-
-  // Handle keyboard events
-  $(document).keydown(function (e) {
-    if (e.key === "Escape") {
-      closeLightbox();
-    }
   });
 });

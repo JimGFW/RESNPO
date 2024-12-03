@@ -9,31 +9,37 @@ $(document).ready(function ($) {
 });
 
 $(document).ready(function ($) {
-  $(".slider-wrapper").slick({
-    slidesToShow: 1.2,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: true,
-    infinite: false,
-    speed: 300,
-    cssEase: "linear",
-    centerMode: false,
-  });
+  if ($(".activities-slider-wrapper").length) {
+    $(".activities-slider-wrapper").slick({
+      slidesToShow: 1.2,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true,
+      infinite: false,
+      speed: 300,
+      cssEase: "linear",
+      centerMode: false,
+    });
 
-  function updateContent(currentSlide) {
-    var currentSlideElement = $(currentSlide);
-    var title = currentSlideElement.data("title");
-    var detail = currentSlideElement.data("detail");
+    function updateContent(currentSlide) {
+      var currentSlideElement = $(currentSlide);
+      var title = currentSlideElement.data("title");
+      var detail = currentSlideElement.data("detail");
 
-    $("[data-activity-title]").text(title);
-    $("[data-activity-detail]").text(detail);
+      $("[data-activity-title]").text(title);
+      $("[data-activity-detail]").text(detail);
+    }
+
+    $(".activities-slider-wrapper").on(
+      "afterChange",
+      function (event, slick, currentSlide) {
+        updateContent(slick.$slides[currentSlide]);
+      }
+    );
+
+    // Ensure the first slide content is updated after the DOM is fully loaded
+    updateContent($(".activities-slider-wrapper").slick("getSlick").$slides[0]);
   }
-
-  $(".slider-wrapper").on("afterChange", function (event, slick, currentSlide) {
-    updateContent(slick.$slides[currentSlide]);
-  });
-
-  updateContent($(".slider-wrapper").slick("getSlick").$slides[0]);
 });
 
 $(document).ready(function () {
@@ -69,7 +75,7 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 2000,
     dots: true,
-    arrows: true,
+    arrows: false,
     responsive: [
       {
         breakpoint: 768,
@@ -107,7 +113,7 @@ $(".gallery-wrapper").slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   speed: 1000,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 2000,
   centerMode: true,
   centerPadding: "25%", // or 350px;
@@ -171,7 +177,7 @@ $(document).ready(function ($) {
     slidesToShow: 2.8,
     slidesToScroll: 1,
     arrows: false,
-    dots: true,
+    dots: false,
     adaptiveHeight: true,
   });
 });

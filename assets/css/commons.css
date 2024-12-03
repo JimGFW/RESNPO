@@ -370,7 +370,7 @@ a {
 }
 
 #sdgPage,
-#studyAbroadPage {
+#study_abroad {
   .contact-opp-content {
     padding: 7.5rem 5rem 3rem 5rem;
     background-image: url("../image/sdg/contact-opp-banner.jpeg");
@@ -409,7 +409,7 @@ a {
     padding: 7.5rem 5rem 3rem 5rem;
   }
   .contact-opp-container {
-    padding: 0 5rem 3rem 5rem;
+    padding: 3rem 5rem 3rem 5rem;
   }
 
   /* landing */
@@ -439,6 +439,7 @@ a {
 /* !!Whats New/Upcoming Events _>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 #sdgPage,
+#study_abroad,
 #homepage {
   .news-thumbnail,
   .ue-thumbnail {

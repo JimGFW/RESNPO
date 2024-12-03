@@ -95,12 +95,37 @@ class PastAchievementsPostType
       'normal',
       'high'
     );
+
+    add_meta_box(
+      'project_meta_box',
+      'Project Type',
+      [$this, 'render_project_meta_box'],
+      'pastachievements',
+      'side',
+      'default'
+    );
+  }
+
+  public function render_project_meta_box($post)
+  {
+    $value = get_post_meta($post->ID, '_project_type', true);
+    if (empty($value)) {
+      $value = 'SDG';
+    }
+    wp_nonce_field('save_project_type', 'project_type_nonce');
+?>
+    <label for="project_type">Select Project Type:</label>
+    <select name="project_type" id="project_type">
+      <option value="SDG" <?php selected($value, 'SDG'); ?>>SDG</option>
+      <option value="Study Abroad" <?php selected($value, 'Study Abroad'); ?>>Study Abroad</option>
+    </select>
+  <?php
   }
 
   public function category_meta_box_callback($post)
   {
     $value = get_post_meta($post->ID, 'category', true);
-?>
+  ?>
     <label for="category">Category</label>
     <input type="text" id="category" name="category" value="<?php echo esc_attr($value); ?>">
   <?php
