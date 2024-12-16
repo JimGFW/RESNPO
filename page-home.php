@@ -7,7 +7,7 @@
 
         <div class="home-card first-col fade-left delay_200">
           <div class="image-container">
-            <img src="<?= RESNPO_IMAGE . '/bg1.png' ?>" alt="bg">
+            <img src="<?= RESNPO_IMAGE . '/home/bg1.png' ?>" alt="bg">
           </div>
           <div class="text-container flx-col">
             <h2>Fostering human resources who can think and act on their own.</h2>
@@ -18,7 +18,7 @@
         <div class="flx-col second-col fade-left delay_400">
           <div class="home-card">
             <div class="image-container">
-              <img src="<?= RESNPO_IMAGE . '/bg2.png' ?>" alt="bg">
+              <img src="<?= RESNPO_IMAGE . '/home/bg2.jpeg' ?>" alt="bg">
               <div class="text-container flx-col">
                 <h2>About Us</h2>
                 <h1>ひとりでも多くの子どもたちが、
@@ -39,7 +39,7 @@
 
           <div class="home-card" data-aos-delay=" 300">
             <div class="image-container">
-              <img src="<?= RESNPO_IMAGE . '/bg3.png' ?>" alt="bg">
+              <img src="<?= RESNPO_IMAGE . '/home/bg3.jpeg' ?>" alt="bg">
               <div class="text-container flx-col">
                 <h2>Projects</h2>
                 <h1>「SDGs甲子園」の過去実績 をご 紹介します。</h1>
@@ -166,7 +166,7 @@
           ?>
               <div class="activities-banner" data-title="<?php the_title(); ?>" data-detail="<?php echo esc_html($activity_detail); ?>">
                 <div class="supporting-detail flx">
-                  <?php echo esc_html($supporting_detail); ?>
+                  <?php echo nl2br(esc_html($supporting_detail)); ?>
                 </div>
                 <img src="<?php echo esc_url($activity_image); ?>" alt="<?php the_title(); ?>">
               </div>
@@ -375,10 +375,10 @@
               <img src="<?= RESNPO_IMAGE . '/home/logo-2.png' ?>" alt="sponsor2">
             </div>
             <div class="sponsor-card">
-              <img src="<?= RESNPO_IMAGE . '/home/logo-3.png' ?>" alt="sponsor3">
+              <img src="<?= RESNPO_IMAGE . '/home/shinonome.jpg' ?>" alt="sponsor3">
             </div>
             <div class="sponsor-card">
-              <img src="<?= RESNPO_IMAGE . '/home/logo-4.png' ?>" alt="sponsor4">
+              <img src="<?= RESNPO_IMAGE . '/home/toyopet.jpg' ?>" alt="sponsor4">
             </div>
             <div class="sponsor-card">
               <img src="<?= RESNPO_IMAGE . '/home/logo-5.png' ?>" alt="sponsor5">
@@ -402,15 +402,15 @@
       <div class="global-width">
         <?php section_title('Where are we located?') ?>
         <div class="location-card-wrapper flx-row jc-sa">
-          <button class="location-card flx jc-sb" data-location="https://maps.google.com/?q=愛媛県松山市平井町1426番地2&output=embed" data-aos="fade-up">
+          <button class="location-card flx jc-sb __active" data-location="https://maps.google.com/?q=愛媛県松山市平井町1426番地2&output=embed&hl=ja" data-aos="fade-up">
             <h3>愛媛県松山市平井町1426番地2 </h3>
             <span><?= SVG_play_brown ?></span>
           </button>
-          <button class="location-card flx jc-sb" data-location="https://maps.google.com/?q=島根県隠岐郡西ノ島町大字浦郷３１&output=embed" data-aos="fade-up">
+          <button class="location-card flx jc-sb" data-location="https://maps.google.com/?q=島根県隠岐郡西ノ島町大字浦郷３１&output=embed&hl=ja" data-aos="fade-up">
             <h3>島根県隠岐郡西ノ島町大字浦郷３１ </h3>
             <span><?= SVG_play_brown ?></span>
           </button>
-          <button class="location-card flx jc-sb" data-location="https://maps.google.com/?q=5/F PAFCPIC Building, Taft North, Brgy. Buhang, Mandurriao, Iloilo City, Iloilo, Philippines&output=embed" data-aos="fade-up">
+          <button class="location-card flx jc-sb" data-location="https://maps.google.com/?q=5/F PAFCPIC Building, Taft North, Brgy. Buhang, Mandurriao, Iloilo City, Iloilo, Philippines&output=embed&hl=ja" data-aos="fade-up">
             <h3>5/F PAFCPIC Building, Taft North, Brgy. Buhang, Mandurriao, Iloilo City, Iloilo, Philippines </h3>
             <span><?= SVG_play_brown ?></span>
           </button>
@@ -419,7 +419,7 @@
           <iframe
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            id="map-frame" src="https://maps.google.com/?q=愛媛県松山市平井町1426番地2&output=embed" frameborder="0">
+            id="map-frame" src="https://maps.google.com/?q=愛媛県松山市平井町1426番地2&output=embed&hl=ja" frameborder="0">
           </iframe>
         </div>
       </div>

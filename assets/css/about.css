@@ -25,6 +25,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 12px;
+    object-position: bottom;
   }
 
   .section-title {
@@ -76,8 +77,8 @@
   }
 
   .mv-img {
-    max-width: 39.375rem;
-    height: 16.375rem;
+    /* max-width: 39.375rem; */
+    height: 26.25rem;
   }
 
   .mv-img img {
@@ -85,6 +86,47 @@
     height: 100%;
     object-fit: cover;
     border-radius: 12px;
+    object-position: top;
+  }
+  .mission-list {
+    counter-reset: list-counter;
+    padding-top: 2rem;
+  }
+  .mission-list li {
+    position: relative;
+    list-style: none;
+    padding-left: 50px;
+    margin-top: 20px;
+    font-family: var(--bevietnampro);
+  }
+
+  .mission-list li::before {
+    content: counter(list-counter);
+    counter-increment: list-counter;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* padding: 5px 10px; */
+    width: 24px;
+    height: 24px;
+    background-color: #f4b9ad;
+    color: #000000;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mission-list h3 {
+    font-family: var(--notosansjp);
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 26.06px;
+  }
+  .mission-list h4 {
+    font-family: var(--notosansjp);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.17px;
   }
 
   /* !!Action _>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
@@ -92,7 +134,12 @@
   .action-wrapper {
     margin-top: auto;
     height: 100vh;
-    background-image: url("../image/about/action-bg.png");
+    background-image: linear-gradient(
+        180.07deg,
+        rgba(0, 0, 0, 0) 12.34%,
+        rgba(0, 0, 0, 0.8) 99.94%
+      ),
+      url("../image/about/action-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     text-align: left;
@@ -102,6 +149,7 @@
     padding: 2rem;
     color: #fff;
     border-radius: 12px;
+    background-position: center;
   }
   .action-content h1 {
     font-family: var(--notosansjp);

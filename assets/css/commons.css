@@ -52,6 +52,9 @@ html {
 .ai-fs {
   align-items: flex-start;
 }
+.gap_1 {
+  gap: 1rem;
+}
 
 .p-0_5 {
   padding: 0.125rem;
@@ -70,6 +73,9 @@ html {
 .c-lbrown {
   color: var(--lightbrown);
 }
+.c-brown {
+  color: var(--brown);
+}
 .c-dbrown {
   color: var(--darkbrown);
 }
@@ -78,6 +84,9 @@ html {
 }
 .bg-dbrown {
   background-color: var(--darkbrown);
+}
+.bg-brown {
+  background-color: var(--brown);
 }
 .bg-white {
   background-color: #fff;
